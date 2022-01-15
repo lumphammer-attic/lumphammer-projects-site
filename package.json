@@ -35,6 +35,7 @@
     "@lukeed/uuid": "^2.0.0",
     "@picocss/pico": "^1.4.3",
     "cookie": "^0.4.1",
+    "mvp.css": "^1.8.0",
     "open-props": "^1.1.2"
   }
 }

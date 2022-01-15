@@ -1,12 +1,50 @@
 @import '@fontsource/fira-mono';
-@import "open-props/style";
-@import "open-props/normalize";
 @import "@picocss/pico";
-/* @import "open-props/gradients"; */
+/* @import "open-props/style";
+@import "open-props/normalize"; */
 
 
-/* body {
-	background-image: var(--gradient-15);
+/*
+ * Our base CSS is pico.css, so we work by applying skins on top of that.
+ * We also have Open Props, which defines its own "theme".
+ * We ergo need to map OP themes to Pico themes, I guess?
+ */
+
+/* Pink Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"], :root:not([data-theme="dark"]) {
+  --primary: #d81b60;
+  --primary-hover: #c2185b;
+  --primary-focus: rgba(216, 27, 96, 0.125);
+  --primary-inverse: #FFF;
+}
+
+/* Pink Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #d81b60;
+    --primary-hover: #e91e63;
+    --primary-focus: rgba(216, 27, 96, 0.25);
+    --primary-inverse: #FFF;
+		--card-background-color: yellow;
+
+  }
+}
+
+/* @media (--OSdark) {
+	html {
+		--text1: var(--gray-1);
+		--text2: var(--gray-3);
+	}
 } */
 
 
+footnote {
+	color: var(--text-1);
+	display: block;
+	font-size: 0.7em;
+	border-top-width: 1px;
+	border-top-style: solid;
+	margin-top: 2em;
+}

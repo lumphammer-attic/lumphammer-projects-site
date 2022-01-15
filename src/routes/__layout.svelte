@@ -1,7 +1,8 @@
 <script lang="ts">
-	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 </script>
+
+<!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
 
 <nav class="container-fluid">
 	<ul>
@@ -21,12 +22,10 @@
 	<!-- <li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li> -->
 </nav>
 
-<main class="container">
+<main class="container" >
 	<slot />
 </main>
 
 <footer>
 </footer>
 
-<style>
-</style>
