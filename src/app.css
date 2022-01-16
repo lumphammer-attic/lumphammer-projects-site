@@ -1,7 +1,7 @@
 @import '@fontsource/fira-mono';
+@import "open-props/style";
 @import "@picocss/pico";
-/* @import "open-props/style";
-@import "open-props/normalize"; */
+/* @import "open-props/normalize"; */
 
 
 /*
@@ -12,16 +12,16 @@
 
 /* Pink Light scheme (Default) */
 /* Can be forced with data-theme="light" */
-[data-theme="light"], :root:not([data-theme="dark"]) {
+/* [data-theme="light"], :root:not([data-theme="dark"]) {
   --primary: #d81b60;
   --primary-hover: #c2185b;
   --primary-focus: rgba(216, 27, 96, 0.125);
   --primary-inverse: #FFF;
-}
+} */
 
 /* Pink Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
+/* @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --primary: #d81b60;
     --primary-hover: #e91e63;
@@ -30,13 +30,17 @@
 		--card-background-color: yellow;
 
   }
-}
+} */
 
 /* @media (--OSdark) {
 	html {
 		--text1: var(--gray-1);
 		--text2: var(--gray-3);
 	}
+} */
+
+/* :where(a[href]):visited {
+  color: unset;
 } */
 
 

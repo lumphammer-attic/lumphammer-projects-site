@@ -2,6 +2,8 @@
 // import { browser } from "$app/env";
 import KoFi from "$lib/KoFi.svelte";
 // export const prerender = true;
+// export const hydrate = false;
+
 </script>
 
 <svelte:head>
