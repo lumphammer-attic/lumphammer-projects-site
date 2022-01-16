@@ -33,7 +33,7 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
-    "@picocss/pico": "^1.4.3",
+    "@picocss/pico": "^1.4.4",
     "cookie": "^0.4.1",
     "mvp.css": "^1.8.0",
     "open-props": "^1.1.3"
