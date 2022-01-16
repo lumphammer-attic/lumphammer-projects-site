@@ -30,6 +30,29 @@ a:visited {
 	color: var(--color);
 }
 
+
+
+/* Pink Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: var(--pink-3);
+  --primary-hover: var(--pink-6);
+  --primary-focus: rgba(216, 27, 96, 0.125);
+  --primary-inverse: #FFF;
+}
+
+/* Pink Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+		--primary: var(--pink-3);
+		--primary-hover: var(--pink-6);
+		--primary-focus: rgba(216, 27, 96, 0.25);
+    --primary-inverse: #FFF;
+  }
+}
+
 footnote {
 	color: var(--text-1);
 	display: block;
@@ -37,4 +60,8 @@ footnote {
 	border-top-width: 1px;
 	border-top-style: solid;
 	margin-top: 2em;
+}
+
+:root {
+	--color: var(--primary);
 }

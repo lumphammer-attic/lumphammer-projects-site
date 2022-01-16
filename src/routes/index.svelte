@@ -16,7 +16,7 @@ import KoFi from "$lib/KoFi.svelte";
 	</h1>
 
 	<p>
-		text
+		This is my personal projects site (I'm not currently looking for new employment, thanks!)
 	</p>
 
 	<article>

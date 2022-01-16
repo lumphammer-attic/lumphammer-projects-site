@@ -16,9 +16,6 @@
 		<li>
 			<a href="http://twitter.com/n3dst4">Twitter</a>
 		</li>
-		<li>
-			<a href="http://efkghsfipughbns;">liurghnblsigfu</a>
-		</li>
 	</ul>
 	<!-- <li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li> -->
 </nav>
