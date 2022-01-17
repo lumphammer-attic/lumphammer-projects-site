@@ -10,6 +10,8 @@ import KoFi from "$lib/KoFi.svelte";
 	<title>Home</title>
 </svelte:head>
 
+
+
 <section color-scheme="grape" >
 	<h1>
 		lumphammer.net

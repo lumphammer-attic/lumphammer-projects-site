@@ -1,5 +1,23 @@
 <script lang="ts">
 	import '../app.css';
+	import { Sun16, Moon16 } from "svelte-octicons";
+	import { browser } from '$app/env';
+	import { afterUpdate } from 'svelte';
+
+	let scheme = "auto";
+	
+	function getPreferedColorScheme() {
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+	}
+	
+	if (browser) {
+		scheme = getPreferedColorScheme();
+	}
+	
+	console.log({scheme})
+	afterUpdate(() => {
+		document.documentElement.setAttribute("data-theme", scheme);
+	});
 </script>
 
 <nav class="container-fluid">
@@ -16,13 +34,25 @@
 		<li>
 			<a href="http://twitter.com/n3dst4">Twitter</a>
 		</li>
+		<li>
+			{#if scheme  === "light" }
+				<button class="secondary" title="Use dark mode" on:click={() => { scheme = "dark" }}>
+					<Moon16/>
+				</button>
+			{:else if scheme === "dark"}
+				<button class="secondary" title="Use light mode" on:click={() => { scheme = "light" }}>
+					<Sun16/>
+				</button>
+			{/if}
+		</li>
 	</ul>
 	<!-- <li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li> -->
 </nav>
 
-<main class="container" >
+<main class="container">
 	<slot />
 </main>
+
 
 <footer>
 </footer>
