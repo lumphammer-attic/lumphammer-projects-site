@@ -66,3 +66,7 @@ footnote {
 :root {
 	--color: var(--primary);
 }
+
+* {
+	transition: color 300ms ease-in, background-color 300ms ease-in;
+}
