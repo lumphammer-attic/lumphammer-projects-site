@@ -1,7 +1,18 @@
-@import '@fontsource/fira-mono';
+/* FIRA MONO 👇 */
+
+/* @import '@fontsource/fira-mono'; */
+
+/* open-props/style 👇 (~18k)  */
+
 @import "open-props/style";
+
+/* open-props/normalize 👇 (~6k) */
+
 @import "open-props/normalize";
-@import "@picocss/pico";
+
+/* @picocss/pico 👇 */
+
+@import "@picocss/pico/css/pico.min.css";
 
 a:visited {
 	/*
@@ -50,7 +61,8 @@ a:visited {
 		--primary-hover: var(--pink-2);
 		--primary-focus: var(--pink-9);
 		--primary-inverse: var(--gray-9);
-		--background: var(--gray-9)
+		--background-color: var(--gray-9);
+		--card-background-color: var(--gray-8);
 	}
 }
 

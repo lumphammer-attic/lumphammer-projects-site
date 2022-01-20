@@ -44,6 +44,10 @@
 				<button class="secondary" title="Use light mode" on:click={() => { scheme = "light" }}>
 					<Sun16/>
 				</button>
+			{:else}
+				<button class="secondary" disabled title="Theme switcher disabled">
+					<Sun16/>
+				</button>
 			{/if}
 		</li>
 	</ul>
