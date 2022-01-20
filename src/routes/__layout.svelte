@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.css';
+	import '../app.less';
 	import Sun16 from "svelte-octicons/lib/Sun16.svelte";
 	import Moon16 from "svelte-octicons/lib/Moon16.svelte";
 	import { browser } from '$app/env';
