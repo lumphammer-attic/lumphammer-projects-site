@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
-	import { Sun16, Moon16 } from "svelte-octicons";
+	import Sun16 from "svelte-octicons/lib/Sun16.svelte";
+	import Moon16 from "svelte-octicons/lib/Moon16.svelte";
 	import { browser } from '$app/env';
 	import { afterUpdate } from 'svelte';
 
