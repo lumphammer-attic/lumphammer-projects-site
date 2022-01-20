@@ -1,0 +1,59 @@
+@use "sass:color";
+
+@keyframes rotate {
+  0% {
+    // transform-origin: center center;
+    transform: translate(-25%, -25%) rotate(0);
+    // opacity: 0;
+  }
+  50% {
+    // transform-origin: center center;
+    transform: translate(-25%, -25%) rotate(180deg);
+    // opacity: 0;
+  }
+  
+  100% {
+    // transform-origin: center center;
+    transform: translate(-25%, -25%) rotate(360deg);
+    // opacity: 1;
+  }
+}
+
+@mixin backdrop {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  // transform: rotate(45deg);
+  // background: repeating-conic-gradient(
+  //   from 3deg at 25% 25%,
+  //   hsl(200, 100%, 50%) 0deg 15deg,
+  //   hsl(200, 100%, 60%) 10deg 30deg);
+  /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */  
+  // animation:    3s         ease-in           1s      2                 reverse     both        running       rotate;
+  animation-name: rotate;
+  animation-duration: 150s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 1;
+  pointer-events: none;
+
+}
+$edge: #fff1;
+$middle: #fff0;
+
+.backdrop1 {
+  @include backdrop;
+  background: repeating-radial-gradient(circle at 150% 150%, $middle, $edge 5px, $middle 10px);
+}
+
+.backdrop2 {
+  @include backdrop;
+  background: repeating-linear-gradient($middle, $edge 5px, $middle 10px);
+  animation-duration: 450s;
+  animation-direction: reverse;
+
+}
+
+.backdrops {
+  mix-blend-mode: screen;
+}
