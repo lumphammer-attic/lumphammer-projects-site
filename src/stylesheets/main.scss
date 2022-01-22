@@ -86,8 +86,8 @@ footnote {
 	// font-family: 'Special Elite', cursive;
 	font-family: 'VT323', monospace;
 	--font-size: 30px;
-	$c1: #031;
-	$c2: #120;
+	$c1: #052;
+	$c2: #530;
 	background-image:
 		radial-gradient(
 			circle at 80% 20%,
@@ -98,11 +98,12 @@ footnote {
 		
 		radial-gradient(
 			circle at 20% 80%,
-			$c2,
-			color.change($c2, $alpha: 0)
+			$c2 0%,
+			color.change($c2, $alpha: 0) 50%,
+			color.change($c2, $alpha: 0) 100%,
 		)
 		;
-	box-shadow: 0 0 6em 0em #000 inset;
+	box-shadow: 0 0 3em 0em #000 inset;
 	width: 100%;
   height: 100%;
   position: relative;
