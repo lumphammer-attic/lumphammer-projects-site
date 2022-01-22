@@ -21,6 +21,13 @@ import KoFi from "$lib/KoFi.svelte";
 		This is my personal projects site (I'm not currently looking for new employment, thanks!)
 	</p>
 
+	<div class="grid">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+
 	<KoFi />
 
 	<div>

@@ -23,11 +23,11 @@
 	// });
 </script>
 
-<div class="backdrops">
+<!-- <div class="backdrops">
 	<div class="backdrop1" ></div>
 	<div class="backdrop2" ></div>
 	<div class="backdrop3" ></div>
-</div>
+</div> -->
 
 <!-- <Nav /> -->
 
