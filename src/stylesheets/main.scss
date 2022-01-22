@@ -1,19 +1,20 @@
+@use "sass:color";
+
 /* FIRA MONO 👇 */
 
 /* @import '@fontsource/fira-mono'; */
 
 /* open-props/style 👇 (~18k)  */
-
 @import "open-props/style";
 
 /* open-props/normalize 👇 (~6k) */
-
 @import "open-props/normalize";
 
 /* @picocss/pico 👇 */
-
 @import "@picocss/pico/css/pico.min.css";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 @import "./backdrops.scss";
 
@@ -80,6 +81,24 @@ footnote {
 
 :root {
 	--color: var(--primary);
+	// font-family: 'Special Elite', cursive;
+	$c1: #031;
+	$c2: #120;
+	background-image:
+		radial-gradient(
+			circle at 80% 20%,
+			$c1 0%,
+			color.change($c1, $alpha: 0) 50%,
+			color.change($c1, $alpha: 0) 100%,
+		),
+		
+		radial-gradient(
+			circle at 20% 80%,
+			$c2,
+			color.change($c2, $alpha: 0)
+		)
+		;
+	box-shadow: 0 0 6em 0em #000 inset;
 }
 
 // asdasd
@@ -87,3 +106,12 @@ footnote {
 	transition: color 300ms ease-in, background-color 300ms ease-in;
 }
 
+h1, h2, h3, h4 {
+	// font-family: 'Roboto Mono', monospace;
+	// font-family: 'Special Elite', cursive;
+	font-family: 'Press Start 2P', cursive;
+	background-image: var(--gradient-30);
+	background-clip: text;
+	color: transparent;
+	text-shadow: 0 0 1em #18d073;
+}
