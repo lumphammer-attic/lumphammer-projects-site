@@ -38,22 +38,27 @@
   pointer-events: none;
 
 }
-$edge: #fff1;
-$middle: #fff0;
+$edge1: #fff1;
+$middle1: #fff0;
+
+$edge2: #0001;
+$middle2: #0000;
+
+
 
 .backdrop1 {
   @include backdrop;
-  background: repeating-radial-gradient(circle at 150% 150%, $middle, $edge 5px, $middle 10px);
+  background: repeating-radial-gradient(circle at 150% 150%, $middle1, $edge1 5px, $middle1 10px);
 }
 
 .backdrop2 {
   @include backdrop;
-  background: repeating-linear-gradient($middle, $edge 5px, $middle 10px);
+  background: repeating-linear-gradient($middle2, $edge2 5px, $middle2 10px);
   animation-duration: 450s;
   animation-direction: reverse;
 
 }
 
 .backdrops {
-  mix-blend-mode: screen;
+  mix-blend-mode: hard-light;
 }
