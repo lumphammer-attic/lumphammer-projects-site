@@ -35,7 +35,12 @@
 	<slot />
 </main>
 
+<!-- <footer>
+</footer> -->
 
-<footer>
-</footer>
+<div class="page-scroller">
+</div>
+
+
+
 
