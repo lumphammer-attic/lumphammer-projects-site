@@ -81,11 +81,7 @@ footnote {
 	margin-top: 2em;
 }
 
-:root {
-	--color: var(--primary);
-	// font-family: 'Special Elite', cursive;
-	font-family: 'VT323', monospace;
-	--font-size: 30px;
+@mixin vt-gradients {
 	$c1: #052;
 	$c2: #530;
 	background-image:
@@ -104,20 +100,18 @@ footnote {
 		)
 	;
 	background-attachment: fixed;
-	box-shadow: 0 0 3em 0em #000 inset;
-	// width: 100%;
-  // height: 100%;
-  // position: relative;
-  // margin: 0;
-  // overflow: hidden;
+}
+
+:root {
+	@include vt-gradients;
+	--color: var(--primary);
+	font-family: 'VT323', monospace;
+	--font-size: 30px;
 }
 
 body {
-	// width: 100%;
-  // height: 100%;
-  // position: relative;
-  // margin: 0;
-  // overflow: auto;
+	box-shadow: 0 0 3em 0em #000 inset;
+
 }
 
 * {
@@ -126,8 +120,6 @@ body {
 }
 
 h1, h2, h3, h4 {
-	// font-family: 'Roboto Mono', monospace;
-	// font-family: 'Special Elite', cursive;
 	font-family: 'Press Start 2P', cursive;
 	background-image: var(--gradient-30);
 	background-clip: text;
