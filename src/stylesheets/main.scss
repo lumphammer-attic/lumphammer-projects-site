@@ -1,23 +1,18 @@
 @use "sass:color";
 
-/* FIRA MONO 👇 */
-
-/* @import '@fontsource/fira-mono'; */
-
-/* open-props/style 👇 (~18k)  */
 @import "open-props/style";
+// @import "open-props/normalize";
 
-/* open-props/normalize 👇 (~6k) */
-@import "open-props/normalize";
-
-/* @picocss/pico 👇 */
 @import "@picocss/pico/css/pico.min.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Special+Elite&display=swap');
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+/* INCLUDES */
 @import "./backdrops.scss";
+@import "./vt-gradients.scss";
+@import "./footnote.scss";
 
 a:visited {
 	/*
@@ -47,71 +42,24 @@ a:visited {
 }
 
 
-
-/* Pink Light scheme (Default) */
-/* Can be forced with data-theme="light" */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  --primary: var(--pink-8);
-  --primary-hover: var(--pink-6);
-  --primary-focus: var(--pink-1);
-  --primary-inverse: var(--gray-9);
-}
-
-/* Pink Dark scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-		--primary: var(--pink-4);
-		--primary-hover: var(--pink-2);
-		--primary-focus: var(--pink-9);
-		--primary-inverse: var(--gray-9);
-		--background-color: var(--gray-9);
-		--card-background-color: var(--gray-8);
-		--color: #7fe9b4;
-	}
-}
-
-footnote {
-	color: var(--text-1);
-	display: block;
-	font-size: 0.7em;
-	border-top-width: 1px;
-	border-top-style: solid;
-	margin-top: 2em;
-}
-
-@mixin vt-gradients {
-	$c1: #052;
-	$c2: #530;
-	background-image:
-		radial-gradient(
-			circle at 80% 20%,
-			$c1 0%,
-			color.change($c1, $alpha: 0) 50%,
-			color.change($c1, $alpha: 0) 100%,
-		),
-		
-		radial-gradient(
-			circle at 20% 80%,
-			$c2 0%,
-			color.change($c2, $alpha: 0) 50%,
-			color.change($c2, $alpha: 0) 100%,
-		)
-	;
-	background-attachment: fixed;
-}
-
 :root {
 	@include vt-gradients;
-	--color: var(--primary);
-	font-family: 'VT323', monospace;
+	--font-family: 'VT323', monospace;
 	--font-size: 30px;
+}
+
+
+/* Pink Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+:root:not([data-theme="light"]) {  // --primary: #d81b60;
+  // --primary-hover: #e91e63;
+  // --primary-focus: rgba(216, 27, 96, 0.25);
+  // --primary-inverse: #FFF;
+	--color: #73e9ad;
 }
 
 body {
 	box-shadow: 0 0 3em 0em #000 inset;
-
 }
 
 * {
@@ -120,13 +68,33 @@ body {
 }
 
 h1, h2, h3, h4 {
-	font-family: 'Press Start 2P', cursive;
+	font-family: 'Press Start 2P', sans-serif;
 	background-image: var(--gradient-30);
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
-	text-shadow: 
-		0 0 1em #18d073
-		, 0 0 0.5em #fff
+	position: relative;
+	word-wrap: break-word;
+	&:after {
+		word-wrap: break-word;
+		white-space: normal;
+		background: none;
+		content: attr(data-text);
+		left: 0;
+		top: 0;
+		right: 0;
+		position: absolute;
+		text-shadow: 
+			0 0 1em #18d073
+			, 0 0 0.5em #18d073
+			, 0 0 0.25em #18d073
 		;
+		z-index: -1;
+	}
+}
+
+@media (max-width: 480px) {
+	h1, h2, h3, h4 {
+		font-size: 1.5em;
+	}
 }

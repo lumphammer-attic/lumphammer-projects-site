@@ -1,0 +1,20 @@
+@mixin vt-gradients {
+	$c1: #052;
+	$c2: #530;
+	background-image:
+		radial-gradient(
+			circle at 80% 20%,
+			$c1 0%,
+			color.change($c1, $alpha: 0) 50%,
+			color.change($c1, $alpha: 0) 100%,
+		),
+		
+		radial-gradient(
+			circle at 20% 80%,
+			$c2 0%,
+			color.change($c2, $alpha: 0) 50%,
+			color.change($c2, $alpha: 0) 100%,
+		)
+	;
+	background-attachment: fixed;
+}

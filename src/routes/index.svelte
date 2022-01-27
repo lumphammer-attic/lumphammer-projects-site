@@ -12,8 +12,7 @@ import KoFi from "$lib/KoFi.svelte";
 
 
 
-<section color-scheme="grape" >
-	<h1>
+	<h1 data-text="lumphammer.net">
 		lumphammer.net
 	</h1>
 
@@ -54,5 +53,4 @@ import KoFi from "$lib/KoFi.svelte";
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et erat ut ex rhoncus vulputate. Vestibulum aliquam molestie molestie. Nunc a venenatis lectus, nec dignissim massa. Morbi venenatis, magna nec sagittis fermentum, enim tellus dignissim libero, id aliquet metus sem a purus. Quisque risus eros, imperdiet quis arcu at, tempor gravida ante. Nulla facilisi. Mauris eleifend, enim pharetra efficitur interdum, metus dolor ultricies tortor, id convallis tortor augue sit amet libero. Proin blandit efficitur congue. Nullam nisi ligula, molestie quis sagittis ut, accumsan nec quam. Etiam sapien diam, bibendum a mi in, sollicitudin interdum enim. Praesent iaculis eu odio eget aliquam. Nam urna ligula, aliquam vel finibus eu, semper id nunc. Phasellus aliquet vel neque vel viverra. 	
 	</div>
 
-</section>
 
