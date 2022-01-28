@@ -43,24 +43,26 @@ a:visited {
 
 
 :root {
-	@include vt-gradients;
 	--font-family: 'VT323', monospace;
 	--font-size: 30px;
+	// height: 100%;
 }
 
 
 /* Pink Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 :root:not([data-theme="light"]) {  // --primary: #d81b60;
+	@include vt-gradients;
   // --primary-hover: #e91e63;
   // --primary-focus: rgba(216, 27, 96, 0.25);
   // --primary-inverse: #FFF;
 	--color: #73e9ad;
+	// box-shadow: 0 0 3em 0em #000 inset;
 }
 
-body {
-	box-shadow: 0 0 3em 0em #000 inset;
-}
+// body {
+// 	min-height: 100%;
+// }
 
 * {
 	transition: color 300ms ease-in, background-color 300ms ease-in;

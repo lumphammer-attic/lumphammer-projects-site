@@ -1,4 +1,5 @@
 @use "sass:color";
+@import "./vt-gradients.scss";
 
 @keyframes rotate {
   0% {
@@ -36,6 +37,7 @@
   animation-timing-function: linear;
   z-index: 1;
   pointer-events: none;
+  mix-blend-mode: hard-light;
 
 }
 $edge1: #fff1;
@@ -60,12 +62,17 @@ $middle2: #0000;
 }
 
 .backdrops {
+	@include vt-gradients;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   overflow: hidden;
-  mix-blend-mode: hard-light;
   pointer-events: none;
+  mix-blend-mode: hard-light;
+  box-shadow:
+    0 0 3em 0em #000 inset,
+    0 0 2em 0em #000 inset
+  ;
 }
