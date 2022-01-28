@@ -62,7 +62,7 @@ $middle2: #0000;
 }
 
 .backdrops {
-	@include vt-gradients;
+	@include vt-gradients(50%);
   position: fixed;
   top: 0;
   right: 0;

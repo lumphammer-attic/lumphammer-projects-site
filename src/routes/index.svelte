@@ -22,13 +22,11 @@ import Lorem from "$lib/lorem.svelte";
 </p>
 
 <div class="grid">
-	<div>1</div>
+	<KoFi/>
 	<div>2</div>
-	<div>3</div>
-	<div>4</div>
 </div>
 
 <!-- <KoFi /> -->
 
-<Lorem />
+<!-- <Lorem /> -->
 

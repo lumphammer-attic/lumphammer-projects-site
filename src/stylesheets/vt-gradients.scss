@@ -1,19 +1,23 @@
-@mixin vt-gradients {
+@use "sass:math";
+@use "sass:color";
+
+@mixin vt-gradients($alpha: 100%) {
+  $alpha2: math.div($alpha, 100%);
 	$c1: #052;
 	$c2: #530;
 	background-image:
 		radial-gradient(
 			circle at 80% 20%,
 			$c1 0%,
-			color.change($c1, $alpha: 0) 50%,
-			color.change($c1, $alpha: 0) 100%,
+			color.change($c1, $alpha: 0) (50% * $alpha2),
+			color.change($c1, $alpha: 0) (100% * $alpha2),
 		),
 		
 		radial-gradient(
 			circle at 20% 80%,
 			$c2 0%,
-			color.change($c2, $alpha: 0) 50%,
-			color.change($c2, $alpha: 0) 100%,
+			color.change($c2, $alpha: 0) (50% * $alpha2),
+			color.change($c2, $alpha: 0) (100% * $alpha2),
 		)
 	;
 	background-attachment: fixed;
