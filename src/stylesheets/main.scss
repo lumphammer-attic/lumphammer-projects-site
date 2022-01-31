@@ -1,7 +1,7 @@
 @use "sass:color";
 
 @import "open-props/style";
-@import "open-props/normalize";
+// @import "open-props/normalize";
 
 // @import "@picocss/pico/css/pico.min.css";
 
@@ -42,23 +42,12 @@ a:visited {
 }
 
 
-:root {
-	--font-family: 'VT323', monospace;
-	--font-size: 30px;
-	// height: 100%;
-}
-
 
 /* Pink Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-:root:not([data-theme="light"]) {  // --primary: #d81b60;
+:root {
 	@include vt-gradients;
-  // --primary-hover: #e91e63;
-  // --primary-focus: rgba(216, 27, 96, 0.25);
-  // --primary-inverse: #FFF;
-	--color: #73e9ad;
-	--block-spacing-vertical: 1em;
-	// box-shadow: 0 0 3em 0em #000 inset;
+	color: #73e9ad;
 }
 
 // body {

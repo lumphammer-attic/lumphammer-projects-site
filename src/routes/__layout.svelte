@@ -23,6 +23,24 @@
 	// });
 </script>
 
+<style>
+	:global(html) {
+		font-size: 28px;
+		background: #000;
+	}
+	:global(body) {
+		padding: 3em;
+		font-family: 'VT323', monospace;
+	}
+	/* :where(h1) { */
+
+	/* } */
+	* {
+		transition: color 300ms ease-in, background-color 300ms ease-in;
+		text-shadow: 0 0 1em currentcolor;
+	}
+</style>
+
 <div class="backdrops">
 	<div class="backdrop1" ></div>
 	<div class="backdrop2" ></div>
