@@ -1,9 +1,9 @@
 @use "sass:color";
 
 @import "open-props/style";
-// @import "open-props/normalize";
+@import "open-props/normalize";
 
-@import "@picocss/pico/css/pico.min.css";
+// @import "@picocss/pico/css/pico.min.css";
 
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -57,6 +57,7 @@ a:visited {
   // --primary-focus: rgba(216, 27, 96, 0.25);
   // --primary-inverse: #FFF;
 	--color: #73e9ad;
+	--block-spacing-vertical: 1em;
 	// box-shadow: 0 0 3em 0em #000 inset;
 }
 
@@ -101,8 +102,35 @@ h1, h2, h3, h4 {
 	}
 }
 
+
 .ko-fi {
-	--color: #fff;
+	--color: rgb(255, 255, 255);
+	background-image: var(--gradient-3);
+}
+
+.investigator {
+	--color: #333;
+	background-image: var(--gradient-13);
+}
+
+article {
+	--h1-color: var(--color);
+	--h2-color: var(--color);
+	--h3-color: var(--color);
+	--h4-color: var(--color);
+	--block-spacing-vertical: 1em;
 	padding: 1em;
+	border-radius: 1em;
+	h1, h2, h3, h4 {
+		--typography-spacing-vertical: var(--spacing);
+		font-size: 1em;
+		color: var(--color); 
+	}
+}
+
+.ko-fi-badge {
+	transform: scale(2);
+	transform-origin: left;
+	box-shadow: 0 0 0.5em var(--color);
 	border-radius: 1em;
 }

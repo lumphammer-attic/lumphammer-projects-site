@@ -1,4 +1,4 @@
-<script lang="ts">
+<script context="module" lang="ts">
 // import Nav from "$lib/Nav.svelte";
 
 	import "../stylesheets/main.scss";
