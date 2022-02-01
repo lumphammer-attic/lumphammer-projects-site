@@ -37,6 +37,7 @@
     "@lukeed/uuid": "^2.0.0",
     "@picocss/pico": "^1.4.4",
     "cookie": "^0.4.1",
+    "modern-css-reset": "^1.4.0",
     "mvp.css": "^1.8.0",
     "open-props": "^1.1.4",
     "svelte-octicons": "^17.1.0"

@@ -1,7 +1,22 @@
 <script context="module" lang="ts">
 </script>
 
-<article class="ko-fi">
+<style>
+  section {
+    color: rgb(255, 255, 255);
+    background-image: var(--gradient-3);
+  }
+
+  
+  .ko-fi-badge {
+    transform: scale(2);
+    transform-origin: left;
+    box-shadow: 0 0 0.5em var(--color);
+    border-radius: 1em;
+  }
+</style>
+
+<section>
   <h2>Tip jar</h2>
   <p>
     If you like my work, you can chip in towards running costs* at Ko-Fi:
@@ -12,4 +27,4 @@
   </a>
   
   <footnote>*: RPG books, miniatures & whisky</footnote>
-</article>
+</section>

@@ -2,8 +2,8 @@
 
 @import "open-props/style";
 // @import "open-props/normalize";
-
 // @import "@picocss/pico/css/pico.min.css";
+@import "modern-css-reset";
 
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -14,48 +14,15 @@
 @import "./vt-gradients.scss";
 @import "./footnote.scss";
 
-a:visited {
-	/*
-	Firefox ballses up when you have a transition on `a:link` and also have styles
-	for a:visited.
-  https://bugzilla.mozilla.org/show_bug.cgi?id=1327801
-	https://bugzilla.mozilla.org/show_bug.cgi?id=671237
-	https://bugzilla.mozilla.org/show_bug.cgi?id=868975
 
-	here's my minimal repro:
-	https://codesandbox.io/s/firefox-visited-transition-chaos-vdd6b
-
-	this is manifesting for me because I have both open-props/normalize (which
-	defines `:visited` styles) and @picocss/pico (which adds a transition.)
-
-	I have tried all of the below to "remove" the :visited style but you can't
-	retroactively unset a rule, so the answer as of now is to redfine the :visited
-	style using the same variable it uses.
-	*/
-	/* color: var(--pink-6); */
-	/* color: currentcolor; */
-	/* color: inherit; */
-	/* color: initial; */
-	/* color: revert; */
-	/* color: unset;	 */
-	color: var(--color);
-}
-
-
-
-/* Pink Dark scheme (Forced) */
-/* Enabled if forced with data-theme="dark" */
 :root {
 	@include vt-gradients;
 	color: #73e9ad;
 }
 
-// body {
-// 	min-height: 100%;
-// }
 
 * {
-	transition: color 300ms ease-in, background-color 300ms ease-in;
+	// transition: color 300ms ease-in, background-color 300ms ease-in;
 	text-shadow: 0 0 1em currentcolor;
 }
 
@@ -92,34 +59,10 @@ h1, h2, h3, h4 {
 }
 
 
-.ko-fi {
-	--color: rgb(255, 255, 255);
-	background-image: var(--gradient-3);
-}
 
-.investigator {
-	--color: #333;
-	background-image: var(--gradient-13);
-}
 
-article {
-	--h1-color: var(--color);
-	--h2-color: var(--color);
-	--h3-color: var(--color);
-	--h4-color: var(--color);
-	--block-spacing-vertical: 1em;
+section {
 	padding: 1em;
 	border-radius: 1em;
-	h1, h2, h3, h4 {
-		--typography-spacing-vertical: var(--spacing);
-		font-size: 1em;
-		color: var(--color); 
-	}
-}
-
-.ko-fi-badge {
-	transform: scale(2);
-	transform-origin: left;
-	box-shadow: 0 0 0.5em var(--color);
-	border-radius: 1em;
+	margin-bottom: 1em;
 }

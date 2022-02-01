@@ -30,18 +30,16 @@ import Investigator from "$lib/Investigator.svelte";
 	This is my personal projects site (I'm not currently looking for new employment, thanks!)
 </p>
 
-{#if showLorem}
-	<button on:click={toggleLorem}>Hide Lorem</button>
-{:else}
-	<button on:click={toggleLorem}>Show Lorem</button>
-{/if}
-
 <div class="grid">
 	<KoFi/>
 	<Investigator />
 </div>
 
-<!-- <KoFi /> -->
+{#if showLorem}
+	<button on:click={toggleLorem}>Hide Lorem</button>
+{:else}
+	<button on:click={toggleLorem}>Show Lorem</button>
+{/if}
 
 {#if showLorem}
 	<Lorem />

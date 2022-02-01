@@ -23,7 +23,7 @@
 	// });
 </script>
 
-<style>
+<style lang="scss">
 	:global(html) {
 		font-size: 28px;
 		background: #000;
@@ -36,9 +36,16 @@
 
 	/* } */
 	* {
-		transition: color 300ms ease-in, background-color 300ms ease-in;
+		/* transition: color 300ms ease-in, background-color 300ms ease-in; */
 		text-shadow: 0 0 1em currentcolor;
 	}
+
+	p {
+		span {
+			color: red;
+		}
+	}
+
 </style>
 
 <div class="backdrops">
