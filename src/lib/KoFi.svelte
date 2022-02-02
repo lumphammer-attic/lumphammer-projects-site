@@ -17,7 +17,7 @@
 </style>
 
 <section>
-  <h2>Tip jar</h2>
+  <h2 data-text="Tip jar">Tip jar</h2>
   <p>
     If you like my work, you can chip in towards running costs* at Ko-Fi:
   </p>

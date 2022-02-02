@@ -40,10 +40,9 @@
 		text-shadow: 0 0 1em currentcolor;
 	}
 
-	p {
-		span {
-			color: red;
-		}
+	main {
+		max-width: 38rem;
+		margin: 0 auto;
 	}
 
 </style>
@@ -56,7 +55,7 @@
 
 <!-- <Nav /> -->
 
-<main class="container">
+<main>
 	<slot />
 </main>
 
