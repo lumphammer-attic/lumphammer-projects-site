@@ -1,62 +1,65 @@
 <script context="module" lang="ts">
 // import Nav from "$lib/Nav.svelte";
 
-	import "../stylesheets/main.scss";
-	// import Sun16 from "svelte-octicons/lib/Sun16.svelte";
-	// import Moon16 from "svelte-octicons/lib/Moon16.svelte";
-	// import { browser } from '$app/env';
-	// import { afterUpdate } from 'svelte';
+  import "../stylesheets/main.scss";
+  // import Sun16 from "svelte-octicons/lib/Sun16.svelte";
+  // import Moon16 from "svelte-octicons/lib/Moon16.svelte";
+  // import { browser } from '$app/env';
+  // import { afterUpdate } from 'svelte';
 
-	// let scheme = "auto";
-	
-	// function getPreferedColorScheme() {
-	// 	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-	// }
-	
-	// if (browser) {
-	// 	scheme = getPreferedColorScheme();
-	// }
-	
-	// console.log({scheme})
-	// afterUpdate(() => {
-	// 	document.documentElement.setAttribute("data-theme", scheme);
-	// });
+  // let scheme = "auto";
+  
+  // function getPreferedColorScheme() {
+  // 	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  // }
+  
+  // if (browser) {
+  // 	scheme = getPreferedColorScheme();
+  // }
+  
+  // console.log({scheme})
+  // afterUpdate(() => {
+  // 	document.documentElement.setAttribute("data-theme", scheme);
+  // });
 </script>
 
 <style lang="scss">
-	:global(html) {
-		font-size: 28px;
-		background: #000;
-	}
-	:global(body) {
-		padding: 3em;
-		font-family: 'VT323', monospace;
-	}
-	/* :where(h1) { */
+  :global(html) {
+    font-size: 28px;
+    background: #000;
+  }
+  :global(body) {
+    padding: 1rem;
+    font-family: 'VT323', monospace;
+    @media (min-width: 992px) {
+      padding: 3rem;
+    }
+  }
+  /* :where(h1) { */
 
-	/* } */
-	* {
-		/* transition: color 300ms ease-in, background-color 300ms ease-in; */
-		text-shadow: 0 0 1em currentcolor;
-	}
+  /* } */
+  * {
+    /* transition: color 300ms ease-in, background-color 300ms ease-in; */
+    text-shadow: 0 0 1em currentcolor;
+  }
 
-	main {
-		max-width: 38rem;
-		margin: 0 auto;
-	}
+  main {
+    max-width: 992px;
+    margin: 0 auto;
+  }
 
 </style>
 
 <div class="backdrops">
-	<div class="backdrop1" ></div>
-	<div class="backdrop2" ></div>
-	<div class="backdrop3" ></div>
+  <div class="backdrop1" ></div>
+  <div class="backdrop2" ></div>
+  <div class="backdrop3" ></div>
 </div>
 
 <!-- <Nav /> -->
 
 <main>
-	<slot />
+  <slot />
 </main>
 
 <!-- <footer>
