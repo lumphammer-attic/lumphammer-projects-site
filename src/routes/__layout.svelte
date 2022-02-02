@@ -28,18 +28,23 @@
     font-size: 28px;
     background: #000;
   }
+  :global(h1) { font-size: 1.2em; }
+  :global(h2) { font-size: 1.1em; }
+  :global(h3) { font-size: 1.0em; }
+  :global(h4) { font-size: 0.9em; }
   :global(body) {
     padding: 1rem;
     font-family: 'VT323', monospace;
     @media (min-width: 992px) {
       padding: 3rem;
+      :global(h1) { font-size: 1.5em; }
+      :global(h2) { font-size: 1.3em; }
+      :global(h3) { font-size: 1.1em; }
+      :global(h4) { font-size: 1.0em; }
     }
   }
-  /* :where(h1) { */
 
-  /* } */
   * {
-    /* transition: color 300ms ease-in, background-color 300ms ease-in; */
     text-shadow: 0 0 1em currentcolor;
   }
 

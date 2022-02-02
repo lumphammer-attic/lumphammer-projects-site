@@ -22,8 +22,8 @@ import Investigator from "$lib/Investigator.svelte";
 	<title>Home</title>
 </svelte:head>
 
-<h1 data-text="lumphammer.net">
-	lumphammer.net
+<h1 data-text="lumphammer">
+	lumphammer
 </h1>
 
 <p>
