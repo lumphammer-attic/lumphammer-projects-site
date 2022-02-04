@@ -5,8 +5,6 @@ import Lorem from "$lib/Lorem.svelte";
 import Investigator from "$lib/Investigator.svelte";
 // export const prerender = true;
 // export const hydrate = false;
-
-
 </script>
 
 <script lang="ts">
@@ -16,6 +14,12 @@ import Investigator from "$lib/Investigator.svelte";
 		showLorem = !showLorem;
 	}	
 </script>
+
+<style>
+	p {
+		margin: 1em 0;
+	}
+</style>
 
 
 <svelte:head>

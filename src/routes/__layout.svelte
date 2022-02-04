@@ -1,4 +1,6 @@
 <script context="module" lang="ts">
+import Frontdrops from "$lib/Frontdrops.svelte";
+
 // import Nav from "$lib/Nav.svelte";
 
   import "../stylesheets/main.scss";
@@ -27,6 +29,9 @@
   :global(html) {
     font-size: 28px;
     background: #000;
+    --color: #73e9ad;
+    color: var(--color);
+
   }
   :global(h1) { font-size: 1.2em; }
   :global(h2) { font-size: 1.1em; }
@@ -55,11 +60,7 @@
 
 </style>
 
-<div class="backdrops">
-  <div class="backdrop1" ></div>
-  <div class="backdrop2" ></div>
-  <div class="backdrop3" ></div>
-</div>
+<Frontdrops />
 
 <!-- <Nav /> -->
 

@@ -1,0 +1,1 @@
+declare const kofiwidget2: any;
