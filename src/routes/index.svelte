@@ -5,6 +5,7 @@ import Lorem from "$lib/Lorem.svelte";
 import Investigator from "$lib/Investigator.svelte";
 // export const prerender = true;
 // export const hydrate = false;
+const headline="lumphammer with many extra words"
 </script>
 
 <script lang="ts">
@@ -26,8 +27,8 @@ import Investigator from "$lib/Investigator.svelte";
 	<title>Home</title>
 </svelte:head>
 
-<h1 data-text="lumphammer">
-	lumphammer
+<h1 data-text={headline}>
+	{headline}
 </h1>
 
 <p>
