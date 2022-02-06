@@ -69,6 +69,7 @@
     text-align: center;
     background: #070;
     width: max-content;
+    max-width: 100%;
     padding: 0.2em 1em;
     border-radius: 0.2em;
     margin: 0 auto;
@@ -89,11 +90,18 @@
     }
   }
 
+  // * {
+
+  // }
 
 	section {
-		color: rgb(255, 255, 255);
+		--color: #fff;
+    // color: var(--color);
 		background-image: var(--gradient-3);
-		--shadow-color: black;
+		--shadow-color: rgb(150, 0, 142);
+    --h-image: none;
+    --h-color: white;
+    --glow-color: white;
 		box-shadow: 0em 0em 0.5em 0.1em var(--shadow-color);
 		transition: transform 50ms ease-in-out;
 		&:hover {

@@ -1,4 +1,5 @@
 <div class="frontdrops">
+  <div class="noise" />
   <div class="backdrop1" />
   <div class="backdrop2" />
   <div class="backdrop3" />
@@ -47,6 +48,7 @@
 
   .frontdrops {
     @include vt-gradients(1.0);
+    // filter: var(--noise-filter-3);
     position: fixed;
     top: 0;
     right: 0;
@@ -59,7 +61,15 @@
     box-shadow:
       0 0 0.5em 0 #0007 inset,
       ;
+  }
 
-
+  .noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--noise-3);
+    opacity: 0.2;
   }
 </style>
