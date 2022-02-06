@@ -29,10 +29,9 @@
 {/if}
 
 <section>
+  <a class="linkifier" href={kofiUrl} target="_new">Ko-fi</a>
 	<h2 data-text="Tip jar">
-    <a href={kofiUrl}>
-      Tip jar
-    </a>
+    Tip jar
   </h2>
 
   <!-- <a href={kofiUrl}>
@@ -103,20 +102,6 @@
 			transform: scale(1.01);
 		}
 	}
-
-  // h2:first-child a:before {
-  //   content: '';
-  //   display: block;
-  //   position: absolute;
-  //   z-index: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   transition: background-color 0.1s ease-out;
-  //   background-color: transparent;    
-  // }
-
 
   @keyframes kofi-wiggle {
     0% {
