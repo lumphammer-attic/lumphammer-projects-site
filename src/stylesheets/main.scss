@@ -12,6 +12,36 @@
 /* INCLUDES */
 @import "./footnote.scss";
 
+
+html {
+	font-size: 28px;
+	background-color: #000;
+	--color: #73e9ad;
+	color: var(--color);
+	// background-size: 200%;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	padding: 1rem;
+	font-family: 'VT323', monospace;
+	background-attachment: fixed;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+* {
+	text-shadow: 0 0 1em currentcolor;
+}
+
+main {
+	max-width: 992px;
+	margin: 0 auto;
+}
+
+
+
 section {
 	padding: 1em;
 	margin-bottom: 1em;
@@ -43,7 +73,7 @@ a.linkifier {
 
 
 h1, h2, h3, h4 {
-	font-family: 'Press Start 2P', sans-serif;
+	// font-family: 'Press Start 2P', sans-serif;
 	position: relative;
 	word-wrap: break-word;
 	z-index: 0;
@@ -71,5 +101,46 @@ h1, h2, h3, h4 {
 		text-shadow: none;
 		pointer-events: none;
 	}
-
 }
+
+
+h1 {
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 1.2em;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.2em;
+}
+
+
+// responsive snap at 992px
+@media (min-width: 992px) {
+	body {
+		padding: 3rem;
+	}
+	h1, h2, h3, h4 {
+		font-family: 'Press Start 2P', sans-serif;
+	}
+	h1 {
+		font-size: 1.5em;
+	}
+	h2 {
+		font-size: 1.3em;
+	}
+	h3 {
+		font-size: 1.1em;
+	}
+	h4 {
+		font-size: 1em;
+	}
+}
+
+
+
+

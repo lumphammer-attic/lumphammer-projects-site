@@ -1,11 +1,8 @@
 <script context="module" lang="ts">
-// import { browser } from "$app/env";
 import KoFi from "$lib/KoFi.svelte";
 import Lorem from "$lib/Lorem.svelte";
 import Investigator from "$lib/Investigator.svelte";
-// export const prerender = true;
-// export const hydrate = false;
-const headline="lumphammer with many extra words"
+const headline="lumphammer"
 </script>
 
 <script lang="ts">
