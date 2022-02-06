@@ -1,27 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/env';
-	import { onMount } from 'svelte';
-	import { koFoWidgetAsHTML1, koFoWidgetAsHTML2, koFoWidgetJS } from './koFiWidgetAsHtml';
-
   const kofiUrl = "https://ko-fi.com/F1F13NAXL";
   const callToAction = "Buy me a coffee on ko-fi.com!";
-
-	// let aTag: HTMLAnchorElement;
-	// let kofiWidget: HTMLDivElement;
-
-	// function bootKofi() {
-	// 	if (!window.hasOwnProperty('kofiwidget2')) {
-	// 		console.log('Waiting...');
-	// 		setTimeout(bootKofi, 200);
-	// 		return;
-	// 	}
-	// 	console.log('Booting Ko-Fi...');
-	// 	kofiwidget2.init('Support Me on Ko-fi', '#1b7d00', 'F1F13NAXL');
-	// 	const html = kofiwidget2.getHTML();
-	// 	kofiWidget.innerHTML = html;
-	// }
-
-	// onMount(bootKofi);
 </script>
 
 {#if browser}
@@ -34,16 +14,7 @@
     Tip jar
   </h2>
 
-  <!-- <a href={kofiUrl}>
-    Tip jar
-  </a> -->
-
-
 	<p>If you like my work, you can chip in towards running costs*:</p>
-
-  <!-- Attempt 1: keep a ref to this div, pull in the 3rd party script, and
-    beat it up until we can render the widget here-->
-	<!-- <div bind:this={kofiWidget} /> -->
 
 	<div class="kofi-widget">
 		<a
@@ -90,14 +61,20 @@
     }
   }
 
-  // * {
-
-  // }
-
 	section {
 		--color: #fff;
     // color: var(--color);
-		background-image: var(--gradient-3);
+		background-image: 
+      radial-gradient(
+        circle at top right,
+        #0ff7,
+        #0ff0
+      ),
+      radial-gradient(
+        circle at bottom left,
+        #ff149277,
+        #ff149200
+      );
 		--shadow-color: rgb(150, 0, 142);
     --h-image: none;
     --h-color: white;

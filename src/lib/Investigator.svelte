@@ -9,10 +9,6 @@
     background-size: cover;
     background-position-y: 70%;
     color: white;
-  }
-
-
-  h1, h2, h3, h4 {
     --glow-color: #000;
   }
 </style>
