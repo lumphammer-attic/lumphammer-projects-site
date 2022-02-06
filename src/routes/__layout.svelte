@@ -1,28 +1,5 @@
 <script context="module" lang="ts">
 	import Frontdrops from '$lib/Frontdrops.svelte';
-
-	// import Nav from "$lib/Nav.svelte";
-
-	import '../stylesheets/main.scss';
-	// import Sun16 from "svelte-octicons/lib/Sun16.svelte";
-	// import Moon16 from "svelte-octicons/lib/Moon16.svelte";
-	// import { browser } from '$app/env';
-	// import { afterUpdate } from 'svelte';
-
-	// let scheme = "auto";
-
-	// function getPreferedColorScheme() {
-	// 	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-	// }
-
-	// if (browser) {
-	// 	scheme = getPreferedColorScheme();
-	// }
-
-	// console.log({scheme})
-	// afterUpdate(() => {
-	// 	document.documentElement.setAttribute("data-theme", scheme);
-	// });
 </script>
 
 <main>

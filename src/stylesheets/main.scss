@@ -1,8 +1,8 @@
 @use "sass:color";
 
+// right now I get "Can't find stylesheet to import" if I load these from a 
+// <style> in the layout.
 @import "open-props/style";
-// @import "open-props/normalize";
-// @import "@picocss/pico/css/pico.min.css";
 @import "modern-css-reset";
 
 /* FONTS */
@@ -10,20 +10,37 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 /* INCLUDES */
-@import "./vt-gradients.scss";
 @import "./footnote.scss";
 
-
-// :root {
-// 	@include vt-gradients;
-// 	color: #73e9ad;
-// }
-
-
-* {
-	// transition: color 300ms ease-in, background-color 300ms ease-in;
-	text-shadow: 0 0 1em currentcolor;
+section {
+	padding: 1em;
+	margin-bottom: 1em;
+	border: 2px solid currentColor;
+	position: relative;
 }
+
+// adapted from https://satabios.github.io/pensieve/clickable-cards
+a.linkifier {
+	// position: absolute;
+	// visibility: hidden;
+	width: 0;
+	height: 0;
+	display: block;
+	overflow: hidden;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		transition: background-color 0.1s ease-out;
+		background-color: transparent;
+	}	
+}
+
 
 h1, h2, h3, h4 {
 	font-family: 'Press Start 2P', sans-serif;
@@ -55,35 +72,4 @@ h1, h2, h3, h4 {
 		pointer-events: none;
 	}
 
-}
-
-
-section {
-	padding: 1em;
-	margin-bottom: 1em;
-	border: 2px solid currentColor;
-	position: relative;
-}
-
-
-// adapted from https://satabios.github.io/pensieve/clickable-cards
-a.linkifier {
-	// position: absolute;
-	// visibility: hidden;
-	width: 0;
-	height: 0;
-	display: block;
-	overflow: hidden;
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		z-index: 0;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		transition: background-color 0.1s ease-out;
-		background-color: transparent;
-	}	
 }
