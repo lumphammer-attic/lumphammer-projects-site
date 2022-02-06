@@ -1,24 +1,31 @@
 @use "sass:math";
 @use "sass:color";
 
-@mixin vt-gradients($alpha: 100%) {
-  $alpha2: math.div($alpha, 100%);
-	$c1: #052;
-	$c2: #530;
+@mixin vt-gradients($alphaMod: 1.0) {
+  // $alpha2: math.div($alpha, 100%);
+	$c1: lightgreen;//#052;
+	$c2: rgb(194, 117, 2);
+	$cmiddle: color.mix($c1, $c2);
 	background-image:
+		// radial-gradient(
+		// 	circle at 30% 70%,
+		// 	color.change($c2, $alpha: (1.0 * $alphaMod)) 0%,
+		// 	color.change($c2, $alpha: (0.5 * $alphaMod)) 20%,
+		// 	color.change($c2, $alpha: 0) 40%,
+		// ),
 		radial-gradient(
-			circle at 80% 20%,
-			$c1 0%,
-			color.change($c1, $alpha: 0) (50% * $alpha2),
-			color.change($c1, $alpha: 0) (100% * $alpha2),
+			circle at 50% 50%,
+			color.change($c1, $alpha: (0.7 * $alphaMod)) 0%,
+			color.change($c1, $alpha: (0.35 * $alphaMod)) 50%,
+			color.change($c1, $alpha: 0) 100%,
 		),
-		
-		radial-gradient(
-			circle at 20% 80%,
-			$c2 0%,
-			color.change($c2, $alpha: 0) (50% * $alpha2),
-			color.change($c2, $alpha: 0) (100% * $alpha2),
-		)
+
+		// radial-gradient(
+		// 	circle at 20% 80%,
+		// 	$c2 0%,
+		// 	color.change($c2, $alpha: 0) 50%,
+		// 	color.change($c2, $alpha: 0) 100%,
+		// )
 	;
-	background-attachment: fixed;
+	// background-attachment: fixed;
 }

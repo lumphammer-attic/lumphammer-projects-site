@@ -1,4 +1,4 @@
-<div class="backdrops">
+<div class="frontdrops">
   <div class="backdrop1" />
   <div class="backdrop2" />
   <div class="backdrop3" />
@@ -45,8 +45,8 @@
     animation-direction: reverse;
   }
 
-  .backdrops {
-    @include vt-gradients(50%);
+  .frontdrops {
+    @include vt-gradients(1.0);
     position: fixed;
     top: 0;
     right: 0;
@@ -57,12 +57,9 @@
     mix-blend-mode: hard-light;
     z-index: 1;
     box-shadow:
-      0 0 0.5em 0.5em #000 inset,
-      // 0 0 1em 0em #000 inset
+      0 0 0.5em 0 #0007 inset,
       ;
-    @media (min-width: 992px) {
-      box-shadow: 0 0 3em 0em #000 inset, 0 0 2em 0em #000 inset;
-    }
+
 
   }
 </style>

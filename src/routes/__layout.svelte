@@ -1,79 +1,88 @@
 <script context="module" lang="ts">
-import Frontdrops from "$lib/Frontdrops.svelte";
+	import Frontdrops from '$lib/Frontdrops.svelte';
 
-// import Nav from "$lib/Nav.svelte";
+	// import Nav from "$lib/Nav.svelte";
 
-  import "../stylesheets/main.scss";
-  // import Sun16 from "svelte-octicons/lib/Sun16.svelte";
-  // import Moon16 from "svelte-octicons/lib/Moon16.svelte";
-  // import { browser } from '$app/env';
-  // import { afterUpdate } from 'svelte';
+	import '../stylesheets/main.scss';
+	// import Sun16 from "svelte-octicons/lib/Sun16.svelte";
+	// import Moon16 from "svelte-octicons/lib/Moon16.svelte";
+	// import { browser } from '$app/env';
+	// import { afterUpdate } from 'svelte';
 
-  // let scheme = "auto";
-  
-  // function getPreferedColorScheme() {
-  // 	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  // }
-  
-  // if (browser) {
-  // 	scheme = getPreferedColorScheme();
-  // }
-  
-  // console.log({scheme})
-  // afterUpdate(() => {
-  // 	document.documentElement.setAttribute("data-theme", scheme);
-  // });
+	// let scheme = "auto";
+
+	// function getPreferedColorScheme() {
+	// 	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+	// }
+
+	// if (browser) {
+	// 	scheme = getPreferedColorScheme();
+	// }
+
+	// console.log({scheme})
+	// afterUpdate(() => {
+	// 	document.documentElement.setAttribute("data-theme", scheme);
+	// });
 </script>
 
-<style lang="scss">
-  :global(html) {
-    font-size: 28px;
-    background: #000;
-    --color: #73e9ad;
-    color: var(--color);
-
-  }
-  :global(h1) { font-size: 1.2em; }
-  :global(h2) { font-size: 1.1em; }
-  :global(h3) { font-size: 1.0em; }
-  :global(h4) { font-size: 0.9em; }
-  :global(body) {
-    padding: 1rem;
-    font-family: 'VT323', monospace;
-    @media (min-width: 992px) {
-      padding: 3rem;
-      :global(h1) { font-size: 1.5em; }
-      :global(h2) { font-size: 1.3em; }
-      :global(h3) { font-size: 1.1em; }
-      :global(h4) { font-size: 1.0em; }
-    }
-  }
-
-  * {
-    text-shadow: 0 0 1em currentcolor;
-  }
-
-  main {
-    max-width: 992px;
-    margin: 0 auto;
-  }
-
-</style>
+<main>
+	<slot />
+</main>
 
 <Frontdrops />
 
-<!-- <Nav /> -->
+<style lang="scss">
+	@import '../stylesheets/vt-gradients.scss';
+	:global(html) {
+		font-size: 28px;
+		background-color: #000;
+		--color: #73e9ad;
+		color: var(--color);
+    // background-size: 200%;
+    max-width: 100%;
+    overflow-x: hidden;
+	}
+	:global(h1) {
+		font-size: 1.2em;
+	}
+	:global(h2) {
+		font-size: 1.1em;
+	}
+	:global(h3) {
+		font-size: 1em;
+	}
+	:global(h4) {
+		font-size: 0.9em;
+	}
+	:global(body) {
+		padding: 1rem;
+		font-family: 'VT323', monospace;
+    background-attachment: fixed;
+    max-width: 100%;
+    overflow-x: hidden;
+		@media (min-width: 992px) {
+			padding: 3rem;
+			:global(h1) {
+				font-size: 1.5em;
+			}
+			:global(h2) {
+				font-size: 1.3em;
+			}
+			:global(h3) {
+				font-size: 1.1em;
+			}
+			:global(h4) {
+				font-size: 1em;
+			}
+		}
+	}
 
-<main>
-  <slot />
-</main>
+	* {
+		text-shadow: 0 0 1em currentcolor;
+	}
 
-<!-- <footer>
-</footer> -->
-
-<div class="page-scroller">
-</div>
-
-
-
-
+	main {
+		max-width: 992px;
+		margin: 0 auto;
+	}
+</style>
