@@ -38,17 +38,13 @@
 
   .kofi-widget {
     text-align: center;
-    background: #070;
+    background: #ff149277;
     width: max-content;
     max-width: 100%;
     padding: 0.2em 1em;
     border-radius: 0.2em;
-    margin: 0 auto;
-    &:hover {
-      a {
-        text-decoration: underline;
-      }
-    }
+    margin: 1em auto;
+    border: 2px solid currentColor;
     a {
       color: white;
       text-decoration: none;
@@ -85,6 +81,10 @@
 			--shadow-color: var(--color);
 			// box-shadow: 0em 0em 0.5em 0.1em var(--color);
 			transform: scale(1.01);
+      a {
+        text-decoration: underline;
+      }
+
 		}
 	}
 

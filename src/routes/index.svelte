@@ -2,7 +2,7 @@
 import KoFi from "$lib/KoFi.svelte";
 import Lorem from "$lib/Lorem.svelte";
 import Investigator from "$lib/Investigator.svelte";
-const headline="lumphammer"
+const headline="lumphammer projects"
 </script>
 
 <script lang="ts">
