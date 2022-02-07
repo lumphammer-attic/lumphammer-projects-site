@@ -2,6 +2,8 @@
 import KoFi from "$lib/KoFi.svelte";
 import Lorem from "$lib/Lorem.svelte";
 import Investigator from "$lib/Investigator.svelte";
+import GitLab from "$lib/GitLab.svelte";
+import GitHub from "$lib/GitHub.svelte";
 const headline="lumphammer projects"
 </script>
 
@@ -35,8 +37,11 @@ const headline="lumphammer projects"
 <div class="grid">
 	<KoFi/>
 	<Investigator />
+	<GitLab/>
+	<GitHub/>
 </div>
 
+<hr/>
 {#if showLorem}
 	<button on:click={toggleLorem}>Hide Lorem</button>
 {:else}

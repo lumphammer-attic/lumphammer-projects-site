@@ -13,7 +13,14 @@
   }
 </style>
 
-<section>
+<section class="interactive">
+  <a 
+    href="https://gitlab.com/n3dst4/investigator-fvtt/-/blob/master/README.md"
+    class="linkifier"
+    target="_new"
+  >
+    INVESTIGATOR
+  </a>
   <h2 data-text="INVESTIGATOR System">INVESTIGATOR System</h2>
   <p>
     I wrote a GUMSHOE-compatible system for Foundry VTT.

@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
 {/if}
 
-<section>
+<section class="interactive">
   <a class="linkifier" href={kofiUrl} target="_new">Ko-fi</a>
 	<h2 data-text="Tip jar">
     Tip jar
@@ -39,8 +39,7 @@
   .kofi-widget {
     text-align: center;
     background: #ff149277;
-    width: max-content;
-    max-width: 100%;
+    max-width: max-content;
     padding: 0.2em 1em;
     border-radius: 0.2em;
     margin: 1em auto;
@@ -59,8 +58,13 @@
 
 	section {
 		--color: #fff;
-    // color: var(--color);
-		background-image: 
+		--shadow-color: rgb(150, 0, 142);
+    --hover-shadow-color: white;
+    --h-image: none;
+    --h-color: white;
+    --glow-color: white;
+
+    background-image: 
       radial-gradient(
         circle at top right,
         #0ff7,
@@ -71,21 +75,6 @@
         #ff149277,
         #ff149200
       );
-		--shadow-color: rgb(150, 0, 142);
-    --h-image: none;
-    --h-color: white;
-    --glow-color: white;
-		box-shadow: 0em 0em 0.5em 0.1em var(--shadow-color);
-		transition: transform 50ms ease-in-out;
-		&:hover {
-			--shadow-color: var(--color);
-			// box-shadow: 0em 0em 0.5em 0.1em var(--color);
-			transform: scale(1.01);
-      a {
-        text-decoration: underline;
-      }
-
-		}
 	}
 
   @keyframes kofi-wiggle {
