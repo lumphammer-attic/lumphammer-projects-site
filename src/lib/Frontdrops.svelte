@@ -16,8 +16,8 @@
   }
 
   @mixin frontdrop {
-    width: 200%;
-    height: 200%;
+    width: 300%;
+    height: 300%;
     position: absolute;
     animation-name: rotate;
     animation-duration: 150s;

@@ -11,7 +11,8 @@
 
 /* INCLUDES */
 @import "./footnote.scss";
-
+@import "./headings.scss";
+@import "./sections.scss";
 
 :root {
 	font-size: 28px;
@@ -46,13 +47,6 @@ main {
 
 
 
-section {
-	padding: 1em;
-	margin-bottom: 1em;
-	border: 2px solid currentColor;
-	position: relative;
-}
-
 // adapted from https://satabios.github.io/pensieve/clickable-cards
 a.linkifier {
 	// position: absolute;
@@ -75,73 +69,10 @@ a.linkifier {
 	}	
 }
 
-
-h1, h2, h3, h4 {
-	// font-family: 'Press Start 2P', sans-serif;
-	position: relative;
-	word-wrap: break-word;
-	z-index: 0;
-	width: fit-content;
-	text-shadow: 
-		0 0 1em var(--glow-color)
-		, 0 0 0.5em var(--glow-color)
-		, 0 0 0.25em var(--glow-color)
-	;
-
-	// after element - the gradient text
-	// --h-gradient: var(--gradient-30);
-	&:after {
-		content: attr(data-text);
-		left: 0;
-		top: 0;
-		right: 0;
-		position: absolute;
-		background-image: var(--h-image);
-		background-clip: text;
-		-webkit-background-clip: text;
-		color: var(--h-color);
-		background-size: cover;
-		z-index: 1;
-		text-shadow: none;
-		pointer-events: none;
-	}
-}
-
-
-h1 {
-	font-family: 'Press Start 2P', sans-serif;
-	font-size: 1.2em;
-}
-h2 {
-	font-size: 1.8em;
-}
-h3 {
-	font-size: 1.5em;
-}
-h4 {
-	font-size: 1.2em;
-}
-
-
 // responsive snap at 992px
 @media (min-width: 992px) {
 	body {
 		padding: 3rem;
-	}
-	h1, h2, h3, h4 {
-		font-family: 'Press Start 2P', sans-serif;
-	}
-	h1 {
-		font-size: 1.5em;
-	}
-	h2 {
-		font-size: 1.3em;
-	}
-	h3 {
-		font-size: 1.1em;
-	}
-	h4 {
-		font-size: 1em;
 	}
 }
 

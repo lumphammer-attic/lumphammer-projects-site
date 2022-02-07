@@ -1,0 +1,19 @@
+section {
+	padding: 1em;
+	margin-bottom: 1em;
+	border: 2px solid currentColor;
+	position: relative;
+}
+
+.grid {
+
+}
+
+// responsive snap at 992px
+@media (min-width: 992px) {
+	.grid {
+		display: grid;
+    grid-template-columns: 1fr 1fr;
+		gap: 1em;
+	}
+}
