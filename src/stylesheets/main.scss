@@ -76,6 +76,18 @@ a.linkifier {
 	}
 }
 
+.backdrop-icon {
+	/* filter: url(#pixelate); */
+	// mask-image: var(--noise-3);
+	// mask-mode: alpha;
+	// mask-size: 7em;
+	filter: blur(1px);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(3);
+	opacity: 0.3;
+}
 
 
 
