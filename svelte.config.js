@@ -12,8 +12,7 @@ const config = {
 		adapter: adapter(),
 
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: 'body',
-		appDir
+		target: 'body'
 	}
 };
 
