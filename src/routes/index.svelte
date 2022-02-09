@@ -1,9 +1,10 @@
 <script context="module" lang="ts">
-import KoFi from "$lib/KoFi.svelte";
+import KoFi from "$lib/sections/KoFi.svelte";
 import Lorem from "$lib/Lorem.svelte";
-import Investigator from "$lib/Investigator.svelte";
-import GitLab from "$lib/GitLab.svelte";
-import GitHub from "$lib/GitHub.svelte";
+import Investigator from "$lib/sections/Investigator.svelte";
+import GitLab from "$lib/sections/GitLab.svelte";
+import GitHub from "$lib/sections/GitHub.svelte";
+import Twitter from "$lib/sections/Twitter.svelte";
 const headline="lumphammer projects"
 </script>
 
@@ -39,6 +40,7 @@ const headline="lumphammer projects"
 	<Investigator />
 	<GitLab/>
 	<GitHub/>
+	<Twitter/>
 </div>
 
 <hr/>
