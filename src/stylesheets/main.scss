@@ -15,7 +15,7 @@
 @import "./sections.scss";
 
 :root {
-	font-size: 20px;
+	font-size: 22px;
 	background-color: #000;
 	color: var(--color);
 	--color: #73e9ad;
@@ -71,6 +71,9 @@ a.linkifier {
 
 // responsive snap at 992px
 @media (min-width: 992px) {
+	:root {
+		font-size: 28px;
+	}
 	body {
 		padding: 3rem;
 	}

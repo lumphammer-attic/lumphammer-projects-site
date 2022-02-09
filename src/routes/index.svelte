@@ -24,7 +24,7 @@ const headline="lumphammer projects"
 
 
 <svelte:head>
-	<title>Home</title>
+	<title>lumphammer.net</title>
 </svelte:head>
 
 <h1 data-text={headline}>
@@ -32,7 +32,7 @@ const headline="lumphammer projects"
 </h1>
 
 <p>
-	This is my personal projects site (I'm not currently looking for new employment, thanks!)
+	This is my personal projects site. <b>WIP!</b>
 </p>
 
 <div class="grid">
@@ -43,7 +43,7 @@ const headline="lumphammer projects"
 	<Twitter/>
 </div>
 
-<hr/>
+<!-- <hr/>
 {#if showLorem}
 	<button on:click={toggleLorem}>Hide Lorem</button>
 {:else}
@@ -52,4 +52,4 @@ const headline="lumphammer projects"
 
 {#if showLorem}
 	<Lorem />
-{/if}
+{/if} -->
