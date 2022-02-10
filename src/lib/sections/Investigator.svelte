@@ -9,7 +9,9 @@
     background-size: cover;
     background-position-y: 70%;
     color: white;
-    --glow-color: #000;
+    --glow-color: #fff;
+    --color: #000;
+    --h-image: none;
   }
 </style>
 
@@ -23,7 +25,7 @@
   </a>
   <h2 data-text="INVESTIGATOR System">INVESTIGATOR System</h2>
   <p>
-    I wrote a GUMSHOE-compatible system for Foundry VTT.
+    GUMSHOE-compatible system for Foundry VTT.
   </p>
     
 </section>
