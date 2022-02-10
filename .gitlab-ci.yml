@@ -12,7 +12,7 @@ pages:
   - npm run build
   - ls -l build
   - mv build public
-  - gzip -k -6 $(find public -type f)
+  - gzip -k -6 $(find public -type f -regex ".*\.\(css\|js\|html\|txt\)")
   artifacts:
     paths:
     - public
