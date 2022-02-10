@@ -43,8 +43,8 @@ const headline="lumphammer projects"
 	<Twitter/>
 </div>
 
-<!-- <hr/>
-{#if showLorem}
+<hr/>
+<!-- {#if showLorem}
 	<button on:click={toggleLorem}>Hide Lorem</button>
 {:else}
 	<button on:click={toggleLorem}>Show Lorem</button>
