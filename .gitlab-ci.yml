@@ -12,6 +12,7 @@ pages:
   - npm run build
   - ls -l build
   - mv build public
+  - gzip -k -6 $(find public -type f)
   artifacts:
     paths:
     - public
