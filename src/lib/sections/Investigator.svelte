@@ -5,7 +5,7 @@
   section { 
     color: #333;
     // background-image: var(--gradient-13);
-    background-image: url(investigator-cover-notext.webp);
+    background-image: url(/investigator-cover-notext.webp);
     background-size: cover;
     background-position-y: 70%;
     color: white;
