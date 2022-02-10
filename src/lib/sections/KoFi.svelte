@@ -1,12 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/env';
   const kofiUrl = "https://ko-fi.com/F1F13NAXL";
   const callToAction = "Buy me a coffee on ko-fi.com!";
 </script>
-
-{#if browser}
-	<script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
-{/if}
 
 <section class="interactive">
   <a class="linkifier" href={kofiUrl} target="_new">Ko-fi</a>
