@@ -11,7 +11,10 @@ pages:
   - npm ci
   - npm run build
   - ls -l build
+  # gitlab pages will only work from a folder called "public" so we move 
+  # everything there
   - mv build public
+  # https://webd97.de/post/gitlab-pages-compression/
   - gzip -k -6 $(find public -type f -regex ".*\.\(css\|js\|html\|txt\)")
   artifacts:
     paths:
