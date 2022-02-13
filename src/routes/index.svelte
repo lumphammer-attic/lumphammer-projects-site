@@ -10,6 +10,8 @@ const headline="lumphammer projects"
 </script>
 
 <script lang="ts">
+import Instagram from "$lib/sections/Instagram.svelte";
+
 	let showLorem = false;
 	
 	function toggleLorem (): void {
@@ -43,6 +45,7 @@ const headline="lumphammer projects"
 	<GitHub/>
 	<Twitter/>
 	<Email/>
+	<Instagram />
 </div>
 
 <hr/>
