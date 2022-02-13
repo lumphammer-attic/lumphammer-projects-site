@@ -5,6 +5,7 @@ import Investigator from "$lib/sections/Investigator.svelte";
 import GitLab from "$lib/sections/GitLab.svelte";
 import GitHub from "$lib/sections/GitHub.svelte";
 import Twitter from "$lib/sections/Twitter.svelte";
+import Email from "$lib/sections/Email.svelte";
 const headline="lumphammer projects"
 </script>
 
@@ -41,6 +42,7 @@ const headline="lumphammer projects"
 	<GitLab/>
 	<GitHub/>
 	<Twitter/>
+	<Email/>
 </div>
 
 <hr/>
