@@ -10,6 +10,7 @@ const headline="lumphammer projects"
 </script>
 
 <script lang="ts">
+import About from "$lib/sections/About.svelte";
 import Instagram from "$lib/sections/Instagram.svelte";
 
 	let showLorem = false;
@@ -46,6 +47,7 @@ import Instagram from "$lib/sections/Instagram.svelte";
 	<Twitter/>
 	<Email/>
 	<Instagram />
+	<About/>
 </div>
 
 <hr/>
