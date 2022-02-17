@@ -1,26 +1,16 @@
 <script context="module" lang="ts">
 import KoFi from "$lib/sections/KoFi.svelte";
-import Lorem from "$lib/Lorem.svelte";
 import Investigator from "$lib/sections/Investigator.svelte";
 import GitLab from "$lib/sections/GitLab.svelte";
 import GitHub from "$lib/sections/GitHub.svelte";
 import Twitter from "$lib/sections/Twitter.svelte";
 import Email from "$lib/sections/Email.svelte";
 const headline="lumphammer projects"
-
-const foo = 5;
-
+import About from "$lib/sections/About.svelte";
+import Instagram from "$lib/sections/Instagram.svelte";
 </script>
 
 <script lang="ts">
-import About from "$lib/sections/About.svelte";
-import Instagram from "$lib/sections/Instagram.svelte";
-
-	let showLorem = false;
-	
-	function toggleLorem (): void {
-		showLorem = !showLorem;
-	}	
 </script>
 
 <style>
