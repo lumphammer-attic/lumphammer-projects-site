@@ -7,6 +7,9 @@ import GitHub from "$lib/sections/GitHub.svelte";
 import Twitter from "$lib/sections/Twitter.svelte";
 import Email from "$lib/sections/Email.svelte";
 const headline="lumphammer projects"
+
+const foo = 5;
+
 </script>
 
 <script lang="ts">

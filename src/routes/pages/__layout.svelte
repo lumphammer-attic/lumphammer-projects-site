@@ -1,7 +1,12 @@
 <script>
   import Icon from 'svelte-awesome';
   import arrowleft from 'svelte-awesome/icons/arrow-left';
+  import "../../stylesheets/pages";
+
+  const foo = 5;
+
 </script>
+
 
 <header>
   <a href="/">
@@ -12,3 +17,7 @@
 </header>
 
 <slot/>
+
+
+<style>
+</style>
