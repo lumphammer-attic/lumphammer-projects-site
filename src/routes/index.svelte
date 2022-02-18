@@ -5,7 +5,7 @@ import GitLab from "$lib/sections/GitLab.svelte";
 import GitHub from "$lib/sections/GitHub.svelte";
 import Twitter from "$lib/sections/Twitter.svelte";
 import Email from "$lib/sections/Email.svelte";
-const headline="lumphammer projects"
+const headline="lumphammer projects";
 import About from "$lib/sections/About.svelte";
 import Instagram from "$lib/sections/Instagram.svelte";
 </script>
@@ -29,7 +29,7 @@ import Instagram from "$lib/sections/Instagram.svelte";
 </h1>
 
 <p>
-	This is my personal projects site. <b>WIP!</b>
+	This is my personal projects site. Yes the moiré effect is deliberate. It's cool.
 </p>
 
 <div class="grid">
