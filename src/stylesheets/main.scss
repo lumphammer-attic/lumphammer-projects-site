@@ -13,10 +13,11 @@
 @import "./footnote.scss";
 @import "./headings.scss";
 @import "./sections.scss";
+@import "./inputs.scss";
 
 :root {
 	font-size: 22px;
-	background-color: #000;
+	background-color: #030;
 	color: var(--color);
 	--color: #73e9ad;
 	--glow-color: #11ec2499;

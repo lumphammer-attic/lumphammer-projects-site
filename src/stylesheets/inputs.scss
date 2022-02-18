@@ -1,0 +1,10 @@
+
+input, button, select {
+  &, &> field {
+    
+    background-color: #0009;
+  }
+  &[disabled] {
+    opacity: 0.5;
+  }
+}
