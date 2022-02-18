@@ -10,6 +10,7 @@ module.exports = {
 	},
 	rules: {
 		"quotes": ["error", "double", { "avoidEscape": true }],
+		"semi": ["error"]
 		// "no-unused-vars": ["error", { "args": "all" }],
 	},
 	parserOptions: {
