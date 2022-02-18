@@ -5,5 +5,11 @@ import PageLayout from "$lib/PageLayout.svelte";
 </script>
 
 <PageLayout>
-  <slot></slot>
+  <div>
+    <slot/>
+  </div>
 </PageLayout>
+
+<style lang="scss">
+  
+</style>
