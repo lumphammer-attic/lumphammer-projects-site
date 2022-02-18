@@ -5,7 +5,6 @@
 
 <style lang="scss">
 .wrapper {
-  background-color: red;
   :global(h1), :global(h2), :global(h3), :global(h4) {
     margin: 2.0em 0 1em 0;
   }
