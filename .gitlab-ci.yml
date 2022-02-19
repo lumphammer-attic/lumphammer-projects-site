@@ -11,10 +11,14 @@ pages:
   - npm ci
   - npm run build
   - ls -l build
-  # gitlab pages will only work from a folder called "public" so we move 
-  # everything there
+  # gitlab pages will only work from a folder called "public" so we move
+  # everything there. We `rm -rf public` first to guarantee that it does not
+  # exist (it doesn't exist in the source at the time of writing but if we
+  # somehow added one later it would break because `build` would get copied
+  # *into* `public`)
+  - rm -rf public
   - mv build public
-  # https://webd97.de/post/gitlab-pages-compression/
+  # see https://webd97.de/post/gitlab-pages-compression/
   - gzip -k -6 $(find public -type f -regex ".*\.\(css\|js\|html\|txt\)")
   artifacts:
     paths:
