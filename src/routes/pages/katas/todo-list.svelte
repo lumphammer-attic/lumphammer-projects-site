@@ -1,6 +1,6 @@
 <script>
 
-import TodoList from "$lib/katas/TodoList.svelte";
+import TodoList from "$lib/katas/todo-list/TodoList.svelte";
 import PageLayout from "$lib/PageLayout.svelte";
 
 </script>

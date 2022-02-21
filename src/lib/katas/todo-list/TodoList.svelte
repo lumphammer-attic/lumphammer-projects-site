@@ -1,39 +1,16 @@
 <script lang="ts">
   import {nanoid} from "nanoid";
+import { toDoItems } from "./stores";
+  import { DisplayMode } from "./types";
 
-  interface Item {
-    // id: string;
-    label: string;
-    completed: boolean;
-  }
 
-  enum DisplayMode {
-    completed,
-    notCompleted,
-    both
-  }
-
-  let items: { [id: string]: Item } = {
-    one: {
-      label: "Make a to-do list in Svelte",
-      completed: false
-    },
-    two: {
-      label: "Drink tea",
-      completed: false
-    },
-    three: {
-      label: "Start a Svelte project",
-      completed: true
-    }
-  };
 
   let mode = DisplayMode.notCompleted;
 
   let inputText = "";
 
-  $: filtered = Object.keys(items).filter((id) => {
-    const item = items[id];
+  $: filtered = Object.keys($toDoItems).filter((id) => {
+    const item = $toDoItems[id];
     return (
       mode === DisplayMode.both ||
       (mode === DisplayMode.completed && item.completed) ||
@@ -42,7 +19,7 @@
   });
 
   function onCreate () {
-    items[nanoid()] = {
+    $toDoItems[nanoid()] = {
       completed: false,
       label: inputText,
     };
@@ -64,9 +41,9 @@
       <label>
         <input 
           type="checkbox"
-          bind:checked={items[id].completed}
+          bind:checked={$toDoItems[id].completed}
         />
-        {items[id].label}
+        {$toDoItems[id].label}
       </label>
     </li>
   {/each}
