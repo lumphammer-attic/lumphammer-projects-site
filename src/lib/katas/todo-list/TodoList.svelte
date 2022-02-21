@@ -35,9 +35,10 @@
 </select>
 
 
+{#key mode}
 <ul>
   {#each filtered as id (id)}
-    <li transition:fade>
+    <li transition:fade|local>
       <label>
         <input 
           type="checkbox"
@@ -48,6 +49,7 @@
     </li>
   {/each}
 </ul>
+{/key}
 
 <p>
   <input bind:value={inputText} />
