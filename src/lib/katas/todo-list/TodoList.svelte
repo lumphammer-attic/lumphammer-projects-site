@@ -51,6 +51,7 @@
 </ul>
 {/key}
 
+{#if mode !== DisplayMode.completed}
 <p>
   <input bind:value={inputText} />
   <button
@@ -60,3 +61,4 @@
     Create
 </button>
 </p>
+{/if}
