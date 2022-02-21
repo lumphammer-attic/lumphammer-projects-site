@@ -5,6 +5,6 @@
   export let greeting = defaultGreeting;
 </script>
 
-<p>
+<div>
   {greeting ?? defaultGreeting}, {name ?? defaultName}!
-</p>
+</div>
