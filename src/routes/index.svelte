@@ -38,9 +38,9 @@ import Instagram from "$lib/sections/Instagram.svelte";
 	<GitLab/>
 	<GitHub/>
 	<Twitter/>
-	<Email/>
 	<Instagram />
 	<About/>
+	<Email/>
 </div>
 
 <hr/>

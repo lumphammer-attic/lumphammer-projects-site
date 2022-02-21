@@ -1,8 +1,9 @@
 <script>
-import { browser } from '$app/env';
+import { browser } from "$app/env";
+import RightArrow from "$lib/RightArrow.svelte";
 
-import Icon from 'svelte-awesome';
-import envelope from 'svelte-awesome/icons/envelope-o';
+import Icon from "svelte-awesome";
+import envelope from "svelte-awesome/icons/envelope-o";
 
 let email = "neil-at-lumphammer.com";
 
@@ -16,5 +17,8 @@ if (browser) {
   <Icon class="backdrop-icon" data={envelope} scale={3} />
 	<h2>neil at lumphammer dot com</h2>
 	<a class="linkifier" href={`mailto: ${email}`} target="_new">{email}</a>
-  <p>Email me!</p>
+  <p>
+		Email me!
+		<RightArrow />
+	</p>
 </section>

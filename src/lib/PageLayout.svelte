@@ -1,6 +1,7 @@
 <script>
-  import Icon from "svelte-awesome";
-  import arrowleft from "svelte-awesome/icons/arrow-left";
+  // import Icon from "svelte-awesome";
+  // import arrowleft from "svelte-awesome/icons/arrow-left";
+import LeftArrow from "./LeftArrow.svelte";
 </script>
 
 <style lang="scss">
@@ -17,7 +18,7 @@
 
 <header>
   <a href="/">
-    <Icon data={arrowleft} />
+    <LeftArrow/>
     [lumphammer projects home]
   </a>
   <slot name="header"/>

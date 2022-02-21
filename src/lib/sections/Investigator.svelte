@@ -1,4 +1,5 @@
 <script context="module" lang="ts">
+import RightArrow from "$lib/RightArrow.svelte";
 </script>
 
 <style lang="scss">
@@ -26,6 +27,7 @@
   <h2 data-text="INVESTIGATOR System">INVESTIGATOR System</h2>
   <p>
     GUMSHOE-compatible system for Foundry VTT.
+    <RightArrow />
   </p>
     
 </section>

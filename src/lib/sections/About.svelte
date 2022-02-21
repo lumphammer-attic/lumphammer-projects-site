@@ -1,7 +1,7 @@
 <script>
   import Icon from "svelte-awesome";
   import code from "svelte-awesome/icons/code";
-  import arrow from "svelte-awesome/icons/arrow-right";
+import RightArrow from "$lib/RightArrow.svelte";
 </script>
 
 <section class="interactive">
@@ -10,6 +10,6 @@
   <a class="linkifier" href="/pages/md/about">/about</a>
   <p>
     Techy details
-    <Icon data={arrow} />
+    <RightArrow />
   </p>
 </section>
