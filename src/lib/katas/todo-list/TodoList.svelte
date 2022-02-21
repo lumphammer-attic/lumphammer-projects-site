@@ -1,8 +1,8 @@
 <script lang="ts">
   import {nanoid} from "nanoid";
-import { toDoItems } from "./stores";
+  import { toDoItems } from "./stores";
   import { DisplayMode } from "./types";
-
+  import { fade } from "svelte/transition";
 
 
   let mode = DisplayMode.notCompleted;
@@ -36,8 +36,8 @@ import { toDoItems } from "./stores";
 
 
 <ul>
-  {#each filtered as id}
-    <li>
+  {#each filtered as id (id)}
+    <li transition:fade>
       <label>
         <input 
           type="checkbox"
