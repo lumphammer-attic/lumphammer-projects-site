@@ -19,18 +19,21 @@ input[type=button], button, select {
   border-radius: 1em;
   padding: 0 1em;
   position: relative;
-  &:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    content: "";
-    transition: opacity 300ms ease-out;
-    background-image: radial-gradient(at center, currentColor, #0000 50%);
-  }
-  &:hover:after {
-    opacity: 0.8;
+  &:enabled {
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      content: "";
+      transition: opacity 300ms ease-out;
+      background-image: radial-gradient(at center, currentColor, #0000 50%);
+    }
+    &:hover:after {
+      opacity: 0.8;
+    }
+
   }
 }

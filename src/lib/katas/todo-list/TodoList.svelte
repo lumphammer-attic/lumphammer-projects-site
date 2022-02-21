@@ -53,6 +53,7 @@
   <input bind:value={inputText} />
   <button
     on:click={onCreate}
+    disabled={/^\s*$/.test(inputText)}
   >
     Create
 </button>
