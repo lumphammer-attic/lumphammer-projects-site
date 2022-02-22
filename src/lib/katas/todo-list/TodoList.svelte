@@ -59,8 +59,13 @@
           type="checkbox"
           bind:checked={$toDoItems[id].completed}
         />
-        {#if mode === DisplayMode.completed}
-          <Confirmer on:click={() => onDelete(id)}>Delete</Confirmer>
+        {#if $toDoItems[id].completed}
+          <Confirmer
+            on:click={() => onDelete(id)}
+          >
+            Delete
+            <!-- <span slot="confirming">Fo' sho'?</span> -->
+          </Confirmer>
         {/if}
         {$toDoItems[id].label}
       </label>

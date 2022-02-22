@@ -3,11 +3,26 @@
 
   const dispatch = createEventDispatcher();
 
+  let confirming = false;
+
   function onClick(event: MouseEvent) {
-    dispatch("click", event.detail);
+    if (confirming) {
+      dispatch("click", event.detail);
+    } else {
+      confirming = true;
+      setTimeout(() => {confirming=false;}, 2000);
+    }
   }
 </script>
 
-<button on:click={e => onClick(e)}><slot/></button>
+<button on:click={e => onClick(e)}>
+  {#if confirming}
+    <slot name="confirming">
+      Confirm
+    </slot>
+  {:else}
+    <slot/>
+  {/if}
+</button>
 
 
