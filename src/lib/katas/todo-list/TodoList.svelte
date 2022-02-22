@@ -3,6 +3,7 @@
   import { toDoItems } from "./stores";
   import { DisplayMode } from "./types";
   import { fade } from "svelte/transition";
+  import Confirmer from "$lib/Confirmer.svelte";
 
 
   let mode = DisplayMode.notCompleted;
@@ -24,6 +25,12 @@
       label: inputText,
     };
     inputText = "";
+  }
+
+  function onDelete (id: string) {
+    const items = $toDoItems;
+    delete items[id];
+    $toDoItems = items;
   }
 </script>
 
@@ -52,6 +59,9 @@
           type="checkbox"
           bind:checked={$toDoItems[id].completed}
         />
+        {#if mode === DisplayMode.completed}
+          <Confirmer on:click={() => onDelete(id)}>Delete</Confirmer>
+        {/if}
         {$toDoItems[id].label}
       </label>
     </li>
