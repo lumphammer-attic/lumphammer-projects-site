@@ -34,7 +34,15 @@
   <option value={DisplayMode.both}>Both</option>
 </select>
 
-
+{#if filtered.length === 0}
+  {#if mode === DisplayMode.completed}
+    <p>~~~ No completed items ~~~</p>
+  {:else if mode === DisplayMode.notCompleted}
+    <p>~~~ You're up to date! ~~~</p>
+  {:else}
+    <p>~~~ No items ~~~</p>
+  {/if}
+{/if}
 {#key mode}
 <ul>
   {#each filtered as id (id)}

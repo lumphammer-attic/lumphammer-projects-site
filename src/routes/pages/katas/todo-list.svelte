@@ -7,7 +7,7 @@ import PageLayout from "$lib/PageLayout.svelte";
 
 
 <PageLayout>
-  <h1>To-do list, Svelte-style</h1>
+  <h1>To-do list</h1>
   
   <TodoList/>
 </PageLayout>
