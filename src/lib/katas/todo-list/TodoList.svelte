@@ -32,15 +32,24 @@
     delete items[id];
     $toDoItems = items;
   }
+
+  function onPurge () {
+    const items = $toDoItems;
+    for (const id in filtered) {
+      delete items[id];
+    }
+    $toDoItems = items;
+  }
 </script>
 
 
 <select bind:value={mode}>
-  <option value={DisplayMode.completed}>Completed</option>
-  <option value={DisplayMode.notCompleted}>Not completed</option>
-  <option value={DisplayMode.both}>Both</option>
+  <option value={DisplayMode.completed}>Completed items</option>
+  <option value={DisplayMode.notCompleted}>Current items</option>
+  <option value={DisplayMode.both}>All items</option>
 </select>
 
+<hr />
 {#if filtered.length === 0}
   {#if mode === DisplayMode.completed}
     <p>~~~ No completed items ~~~</p>
@@ -73,15 +82,29 @@
   {/each}
 </ul>
 {/key}
-
 {#if mode !== DisplayMode.completed}
+<hr/>
 <p>
-  <input bind:value={inputText} />
+  <input
+    bind:value={inputText}
+    placeholder="Enter text..."
+  />
   <button
     on:click={onCreate}
     disabled={/^\s*$/.test(inputText)}
   >
     Create
 </button>
+</p>
+{/if}
+{#if mode === DisplayMode.completed}
+<hr/>
+<p>
+  <Confirmer
+    on:click={onPurge}
+    disabled={filtered.length === 0}
+  >
+    Purge all completed items
+  </Confirmer>
 </p>
 {/if}

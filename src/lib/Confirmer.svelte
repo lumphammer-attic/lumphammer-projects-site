@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte";
 
-  const dispatch = createEventDispatcher();
+  export let disabled = false;
 
+  const dispatch = createEventDispatcher();
   let confirming = false;
 
   function onClick(event: MouseEvent) {
@@ -15,7 +16,7 @@
   }
 </script>
 
-<button on:click={e => onClick(e)}>
+<button on:click={e => onClick(e)} disabled={disabled}>
   {#if confirming}
     <slot name="confirming">
       Confirm

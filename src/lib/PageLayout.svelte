@@ -13,6 +13,10 @@ import LeftArrow from "./LeftArrow.svelte";
     margin: 1.0em 0 0 0;
   }
 }
+hr {
+  border-style: double none none none;
+  border-width: 5px;
+}
 </style>
 
 
@@ -28,4 +32,6 @@ import LeftArrow from "./LeftArrow.svelte";
 <div class="wrapper">
   <slot/>
 </div>
+
+<hr/>
 
