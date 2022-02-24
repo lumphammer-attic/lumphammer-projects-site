@@ -105,5 +105,6 @@
     on:click={onReset}
   >
     Reset demo
+    <span slot="confirming">Confirm reset?</span>
   </Confirmer>
 </p>

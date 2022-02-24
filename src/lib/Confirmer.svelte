@@ -7,7 +7,7 @@
 
   export let disabled = false;
 
-  const waitingPeriod = 1000;
+  const waitingPeriod = 500;
   const confirmingTimeout = 5000;
   const thanksPeriod = 2000;
 
