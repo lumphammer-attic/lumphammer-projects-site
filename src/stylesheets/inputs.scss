@@ -15,12 +15,13 @@ input[type=button], button {
   border-radius: 1em;
 }
 
-input[type=button], button, select {
+input[type=button], button, select, div.whoopsie {
   border-radius: 1em;
   padding: 0 1em;
   position: relative;
   &:enabled {
-    &:after {
+    &:before {
+      border-radius: 1em;
       position: absolute;
       top: 0;
       right: 0;
@@ -29,9 +30,14 @@ input[type=button], button, select {
       opacity: 0;
       content: "";
       transition: opacity 300ms ease-out;
-      background-image: radial-gradient(at center, currentColor, #0000 50%);
+      // background-image: radial-gradient(at center, currentColor, #0000 50%);
+      background-image: radial-gradient(at center, #0000 50%, currentColor);
+      // background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.fapality.com%2Fcontents%2Falbums%2Fsources%2F2000%2F2242%2F79608.jpg&f=1&nofb=1);
+      background-position: 50% 74%;
+      background-size: cover;
+      background-clip: content-box;
     }
-    &:hover:after {
+    &:hover:before {
       opacity: 0.8;
     }
 

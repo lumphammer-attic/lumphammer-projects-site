@@ -1,4 +1,3 @@
-
 <script lang="ts">
 	import { createEventDispatcher } from "svelte";
 
@@ -30,15 +29,49 @@
 </script>
 
 <button on:click={e => onClick(e)} disabled={disabled}>
-  {#if mode === "ready"}
-    <slot/>
-  {:else if mode === "confirming"}
-    <slot name="confirming">
-      Confirm
-    </slot>
-  {:else}
-    <span>...</span>
-  {/if}
+  <div class="widther"><slot/></div>
+  <div class="widther"><slot name="confirming">Confirm</slot></div>
+  <div class="widther">...</div>
+
+  <div class="heighter"><slot/></div>
+  <div class="heighter"><slot name="confirming">Confirm</slot></div>
+  <div class="heighter">...</div>
+
+  <div class="actual">
+    {#if mode === "ready"}
+      <slot/>
+    {:else if mode === "confirming"}
+      <slot name="confirming">Confirm</slot>
+    {:else}
+      ...
+    {/if}
+  </div>
 </button>
 
+
+<style lang="scss">
+  .widther {
+    overflow: hidden;
+    height: 0px;
+    width: max-content;
+    background-color: aliceblue;
+  }
+  .heighter {
+    display: inline-block;
+    overflow: hidden;
+    height: auto;
+    width: 0px;
+    background-color: rebeccapurple;
+    white-space: nowrap;
+    line-height: 1;
+  }
+  .actual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    height: auto;
+  }
+</style>
 
