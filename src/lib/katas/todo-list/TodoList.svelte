@@ -35,7 +35,7 @@
 
   function onPurge () {
     const items = $toDoItems;
-    for (const id in filtered) {
+    for (const id of filtered) {
       delete items[id];
     }
     $toDoItems = items;
