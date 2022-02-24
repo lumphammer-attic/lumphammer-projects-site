@@ -2,7 +2,7 @@ import { browser } from "$app/env";
 import { writable } from "svelte/store";
 import type { ToDoItemDict } from "./types";
 
-const initialToDos: ToDoItemDict = {
+export const initialToDos: ToDoItemDict = {
   one: {
     label: "Make a to-do list in Svelte",
     completed: false

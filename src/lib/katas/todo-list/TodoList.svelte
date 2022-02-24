@@ -1,6 +1,6 @@
 <script lang="ts">
   import {nanoid} from "nanoid";
-  import { toDoItems } from "./stores";
+  import { initialToDos, toDoItems } from "./stores";
   import { DisplayMode } from "./types";
   import { fade } from "svelte/transition";
   import Confirmer from "$lib/Confirmer.svelte";
@@ -27,18 +27,16 @@
     inputText = "";
   }
 
-  function onDelete (id: string) {
-    const items = $toDoItems;
-    delete items[id];
-    $toDoItems = items;
-  }
-
   function onPurge () {
     const items = $toDoItems;
     for (const id of filtered) {
       delete items[id];
     }
     $toDoItems = items;
+  }
+
+  function onReset () {
+    $toDoItems = initialToDos;
   }
 </script>
 
@@ -68,14 +66,6 @@
           type="checkbox"
           bind:checked={$toDoItems[id].completed}
         />
-        {#if $toDoItems[id].completed}
-          <Confirmer
-            on:click={() => onDelete(id)}
-          >
-            Delete
-            <!-- <span slot="confirming">Fo' sho'?</span> -->
-          </Confirmer>
-        {/if}
         {$toDoItems[id].label}
       </label>
     </li>
@@ -108,3 +98,11 @@
   </Confirmer>
 </p>
 {/if}
+<hr/>
+<p>
+  <Confirmer
+    on:click={onReset}
+  >
+    Reset demo
+  </Confirmer>
+</p>
