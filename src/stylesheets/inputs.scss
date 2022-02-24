@@ -2,11 +2,17 @@
 input, button, select {
   border: 2px solid currentColor;
 
+  &::placeholder {
+    color: currentColor;
+    opacity: 0.5;
+  }
+
   &, &> field {
     background-color: #0009;
   }
   &[disabled] {
     opacity: 0.5;
+    color: inherit;
   }
 }
 
@@ -40,7 +46,6 @@ input[type=button], button, select, div.whoopsie {
     &:hover:before {
       opacity: 0.8;
     }
-
   }
 }
 
