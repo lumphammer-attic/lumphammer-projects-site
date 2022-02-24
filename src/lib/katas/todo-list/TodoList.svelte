@@ -95,6 +95,7 @@
     disabled={filtered.length === 0}
   >
     Purge all completed items
+    <span slot="confirming">Confirm purge?</span>
   </Confirmer>
 </p>
 {/if}

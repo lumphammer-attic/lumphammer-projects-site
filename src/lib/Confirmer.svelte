@@ -1,13 +1,18 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte";
+  import Icon from "svelte-awesome";
+  import spinner from "svelte-awesome/icons/spinner";
+  import check from "svelte-awesome/icons/check";
+  import {fade} from "svelte/transition";
 
   export let disabled = false;
 
   const waitingPeriod = 1000;
   const confirmingTimeout = 5000;
+  const thanksPeriod = 2000;
 
   const dispatch = createEventDispatcher();
-  let mode: "ready"|"waiting"|"confirming" = "ready";
+  let mode: "ready"|"waiting"|"confirming"|"thanks" = "ready";
 
   let timeoutId: ReturnType<typeof setTimeout>|undefined;
 
@@ -20,10 +25,13 @@
       }, waitingPeriod);
     } else if (mode === "confirming") {
       dispatch("click", event.detail);
-      mode = "ready";
+      mode = "thanks";
       if (timeoutId) {
         clearTimeout(timeoutId);
       }
+      setTimeout(() => {
+        mode = "ready";
+      }, thanksPeriod);
     }
   }
 </script>
@@ -37,15 +45,19 @@
   <div class="heighter"><slot name="confirming">Confirm</slot></div>
   <div class="heighter">...</div>
 
-  <div class="actual">
+  {#key mode}
+  <div class="actual" transition:fade>
     {#if mode === "ready"}
       <slot/>
     {:else if mode === "confirming"}
       <slot name="confirming">Confirm</slot>
-    {:else}
-      ...
+    {:else if mode === "waiting"}
+      <Icon data={spinner} pulse/>
+    {:else if mode === "thanks"}
+      <Icon data={check}/>
     {/if}
   </div>
+  {/key}
 </button>
 
 
