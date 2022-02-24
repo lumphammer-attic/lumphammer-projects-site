@@ -37,6 +37,8 @@
 
   function onReset () {
     $toDoItems = initialToDos;
+    inputText = "";
+    mode = DisplayMode.notCompleted;
   }
 </script>
 
