@@ -58,7 +58,7 @@ nav {
         <!-- <a href={`/${parent}`}> -->
         <a href=".">
           <LeftArrow/>
-          [Up a level]    
+          [up]    
         </a>
       {/if}
     </div>
