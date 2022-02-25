@@ -1,5 +1,5 @@
 ---
-title: Katas
+shortTitle: Katas
 ---
 
 # Katas

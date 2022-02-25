@@ -5,7 +5,7 @@
 <PageLayout>
   <slot/>
   <span slot="header">
-    {$$props.title ?? ""}
+    {$$props.shortTitle ?? ""}
   </span>
 </PageLayout>
 

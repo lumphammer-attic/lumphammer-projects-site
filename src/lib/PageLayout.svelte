@@ -1,7 +1,13 @@
 <script>
-  // import Icon from "svelte-awesome";
-  // import arrowleft from "svelte-awesome/icons/arrow-left";
-import LeftArrow from "./LeftArrow.svelte";
+  import LeftArrow from "./LeftArrow.svelte";
+  import { base } from "$app/paths";
+  import {browser } from "$app/env";
+
+  const current = (browser ? window : global).location;
+  const parent = current?.pathname.replace(new RegExp(`^${base||"/"}`), "").split("/").slice(0, -1).join("/");
+
+  console.log({base, current, parent});
+
 </script>
 
 <style lang="scss">
@@ -17,15 +23,50 @@ hr {
   border-style: double none none none;
   border-width: 5px;
 }
+header {
+  line-height: 1;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  flex: 1;
+  text-align: right;
+  flex-basis: content;
+  min-width: max-content;
+}
+
+.links {
+  flex: 1;
+  min-width: max-content;
+}
 </style>
 
 
 <header>
-  <a href="/">
-    <LeftArrow/>
-    [lumphammer projects home]
-  </a>
-  <slot name="header"/>
+  <nav>
+    <div class="links">
+      <a href="/">
+        <LeftArrow/>
+        [home]
+      </a>
+      {#if parent}
+        <!-- <a href={`/${parent}`}> -->
+        <a href=".">
+          <LeftArrow/>
+          [Up a level]    
+        </a>
+      {/if}
+    </div>
+    <div class="site-title">
+      lumphammer projects
+    </div>
+  </nav>
+  
   <hr />
 </header>
 
