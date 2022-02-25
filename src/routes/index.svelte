@@ -19,11 +19,6 @@ import Instagram from "$lib/sections/Instagram.svelte";
 	}
 </style>
 
-
-<svelte:head>
-	<title>lumphammer.net</title>
-</svelte:head>
-
 <h1 data-text={headline}>
 	{headline}
 </h1>

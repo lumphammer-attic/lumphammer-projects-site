@@ -1,6 +1,6 @@
 <script lang="ts">
   import Hello from "$lib/katas/Hello.svelte";
-import PageLayout from "$lib/PageLayout.svelte";
+  import PageLayout from "$lib/PageLayout.svelte";
   let greeting = "Screw you";
   let useGreeting = false;
   let name = "buddy";

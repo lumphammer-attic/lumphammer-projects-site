@@ -2,6 +2,13 @@
 import adapter from "@sveltejs/adapter-static";
 import preprocess from "svelte-preprocess";
 import { mdsvex } from "mdsvex";
+// import path from "path";
+// import {fileURLToPath} from "url";
+
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+const mdLayoutRelative = "./src/lib/MdLayout.svelte";
+// const mdLayoutPath = path.join(__dirname, mdLayoutRelative);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,7 +17,8 @@ const config = {
 	preprocess: [
     preprocess(),
     mdsvex({
-      extensions: [".md"]
+      extensions: [".md"],
+			layout: mdLayoutRelative,
     })
   ],
 

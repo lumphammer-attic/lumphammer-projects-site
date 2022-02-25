@@ -1,4 +1,8 @@
-# About this site
+---
+title: About
+---
+
+<!-- # About this site -->
 
 ## This site is written using [SvelteKit][sk], a framework for building sites using [Svelte][sv].
 
@@ -11,7 +15,7 @@ The moiré effect is two divs with repeating gradients rotating slowly over the 
 
 It's deployed on [GitLab Pages][glp] via [GitLab CI][glci].
 
-I've started some [code-katas](/pages/katas) to exercise the dynamic side of the code.
+I've started some [code-katas](/pages/katas) to see if Svelte is actually any good.
 
 [sk]: https://kit.svelte.dev/
 [sv]: https://svelte.dev/
