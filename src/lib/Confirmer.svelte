@@ -7,15 +7,18 @@
 
   export let disabled = false;
 
+  
   const waitingPeriod = 500;
   const confirmingTimeout = 5000;
   const thanksPeriod = 2000;
-
+  
   const dispatch = createEventDispatcher();
   let mode: "ready"|"waiting"|"confirming"|"thanks" = "ready";
+  
+  $: effectiveDisabled = mode === "waiting" || mode === "thanks";
 
   let timeoutId: ReturnType<typeof setTimeout>|undefined;
-
+    
   function onClick(event: MouseEvent) {
     if (mode === "ready") {
       mode = "waiting";
@@ -36,7 +39,11 @@
   }
 </script>
 
-<button on:click={e => onClick(e)} disabled={disabled}>
+<button
+  on:click={e => onClick(e)}
+  disabled={disabled}
+  class:effectiveDisabled={effectiveDisabled}
+>
   <div class="widther"><slot/></div>
   <div class="widther"><slot name="confirming">Confirm</slot></div>
   <div class="widther">...</div>
@@ -84,6 +91,9 @@
     transform: translate(-50%, -50%);
     width: max-content;
     height: auto;
+  }
+  .effectiveDisabled {
+    cursor: none;
   }
 </style>
 
