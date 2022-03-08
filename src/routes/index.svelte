@@ -8,6 +8,7 @@ import Email from "$lib/sections/Email.svelte";
 const headline="lumphammer projects";
 import About from "$lib/sections/About.svelte";
 import Instagram from "$lib/sections/Instagram.svelte";
+import Discord from "$lib/sections/Discord.svelte";
 </script>
 
 <script lang="ts">
@@ -24,12 +25,14 @@ import Instagram from "$lib/sections/Instagram.svelte";
 </h1>
 
 <p>
-	This is my personal projects site. Yes the moiré effect is deliberate. It's cool.
+	Hi, I'm Neil de Carteret, and this is my personal projects site. Yes the moiré
+	effect is deliberate. Drop me an email if it makes your device melt.
 </p>
 
 <div class="grid">
 	<KoFi/>
 	<Investigator />
+	<Discord />
 	<GitLab/>
 	<GitHub/>
 	<Twitter/>
