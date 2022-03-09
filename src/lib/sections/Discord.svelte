@@ -3,10 +3,10 @@
 </script>
 
 <section class="interactive">
-	<a href="https://discord.gg" class="linkifier" target="_new"> DISCORD </a>
+	<a href="https://discord.gg/QCgNQZxE" class="linkifier" target="_new"> DISCORD </a>
 	<h2 data-text="Lumphammer Discord">Lumphammer Discord</h2>
 	<p>
-		There is literally no-one on this Discord but me, but we can be friends.
+		There is literally no-one on this Discord but me, but hop on over and say hi. I'm  <code>@n3dst4</code>.
 		<RightArrow />
 	</p>
 </section>

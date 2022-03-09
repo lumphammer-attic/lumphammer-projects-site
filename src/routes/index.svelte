@@ -32,7 +32,7 @@ import Discord from "$lib/sections/Discord.svelte";
 <div class="grid">
 	<KoFi/>
 	<Investigator />
-	<Discord />
+	<!-- <Discord /> -->
 	<GitLab/>
 	<GitHub/>
 	<Twitter/>
