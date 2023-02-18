@@ -1,30 +1,31 @@
-import { browser } from "$app/env";
+import { browser } from "$app/environment";
 import { writable } from "svelte/store";
 import type { ToDoItemDict } from "./types";
 
 export const initialToDos: ToDoItemDict = {
-  one: {
-    label: "Make a to-do list in Svelte",
-    completed: false
-  },
-  two: {
-    label: "Drink tea",
-    completed: false
-  },
-  three: {
-    label: "Start a Svelte project",
-    completed: true
-  }
+	one: {
+		label: "Make a to-do list in Svelte",
+		completed: false
+	},
+	two: {
+		label: "Drink tea",
+		completed: false
+	},
+	three: {
+		label: "Start a Svelte project",
+		completed: true
+	}
 };
 
-const loadedToDos = browser && window.localStorage.getItem("toDos")
-  ? JSON.parse(window.localStorage.getItem("toDos")) 
-  : initialToDos;
+const loadedToDos =
+	browser && window.localStorage.getItem("toDos")
+		? JSON.parse(window.localStorage.getItem("toDos") as string)
+		: initialToDos;
 
 export const toDoItems = writable(loadedToDos);
 
 toDoItems.subscribe((value) => {
-  if (browser) {
-    window.localStorage.setItem("toDos", JSON.stringify(value));
-  }
+	if (browser) {
+		window.localStorage.setItem("toDos", JSON.stringify(value));
+	}
 });

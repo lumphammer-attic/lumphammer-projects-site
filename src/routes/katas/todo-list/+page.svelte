@@ -10,6 +10,6 @@ import PageLayout from "$lib/PageLayout.svelte";
   <h1>To-do list</h1>
   
   <TodoList/>
-  <span slot="header">To-do list</span>
+  <!-- <span slot="header">To-do list</span> -->
 </PageLayout>
 

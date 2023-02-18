@@ -1,7 +1,7 @@
 <script>
   import LeftArrow from "./LeftArrow.svelte";
   import { base } from "$app/paths";
-  import {browser } from "$app/env";
+  import {browser } from "$app/environment";
 
   const current = (browser ? window : global).location;
   const parent = current?.pathname.replace(new RegExp(`^${base||"/"}`), "").split("/").slice(0, -1).join("/");

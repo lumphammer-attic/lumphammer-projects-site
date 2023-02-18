@@ -1,17 +1,15 @@
 <script context="module" lang="ts">
-throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
-// 
 // import KoFi from "$lib/sections/KoFi.svelte";
 // import Investigator from "$lib/sections/Investigator.svelte";
 // import GitLab from "$lib/sections/GitLab.svelte";
 // import GitHub from "$lib/sections/GitHub.svelte";
 // import Twitter from "$lib/sections/Twitter.svelte";
 // import Email from "$lib/sections/Email.svelte";
-// const headline="lumphammer projects";
 // import About from "$lib/sections/About.svelte";
 // import Instagram from "$lib/sections/Instagram.svelte";
 // import Discord from "$lib/sections/Discord.svelte";
-// </script>
+const headline="lumphammer projects";
+</script>
 
 <script lang="ts">
 </script>
@@ -25,22 +23,14 @@ throw new Error("@migration task: Check code was safely removed (https://github.
 <h1 data-text={headline}>
 	{headline}
 </h1>
-
+ 
 <p>
 	Hi, I'm Neil de Carteret, and this is my personal projects site. Yes the moiré
 	effect is deliberate. Drop me an email if it makes your device melt.
 </p>
 
 <div class="grid">
-	<KoFi/>
-	<Investigator />
-	<!-- <Discord /> -->
-	<GitLab/>
-	<GitHub/>
-	<Twitter/>
-	<Instagram />
-	<About/>
-	<Email/>
+	hello
 </div>
 
 <hr/>
