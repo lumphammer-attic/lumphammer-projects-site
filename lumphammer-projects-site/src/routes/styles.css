@@ -1,6 +1,17 @@
 /* @import '@fontsource/fira-mono'; */
 
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: local('Berkeley Mono'), url('/BerkeleyMonoVariable-Regular.woff2') format('woff2');
+}
+
 body {
   background: #333;
   color: #ddd;
+  font-family: 'Berkeley Mono', monospace;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
 }

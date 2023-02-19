@@ -8,9 +8,7 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>Helloe</section>
+<section>Hell0e</section>
 
 <style>
-  section {
-  }
 </style>
