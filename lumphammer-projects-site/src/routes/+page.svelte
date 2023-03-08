@@ -4,11 +4,16 @@
 </script>
 
 <svelte:head>
-  <title>Home</title>
-  <meta name="description" content="Svelte demo app" />
+  <title>Lumphammer Pr0jects</title>
+  <!-- <meta name="description" content="Svelte demo app" /> -->
 </svelte:head>
 
-<section>Hell0e</section>
+<section>
+  <h1>Lumphammer Pr0jects</h1>
+  <p>
+    <a href="/theme-gym" title="Theme">Theme</a>
+  </p>
+</section>
 
 <style>
 </style>
