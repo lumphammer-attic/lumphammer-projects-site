@@ -1,53 +1,51 @@
 <script context="module" lang="ts">
-import KoFi from "$lib/sections/KoFi.svelte";
-import Investigator from "$lib/sections/Investigator.svelte";
-import GitLab from "$lib/sections/GitLab.svelte";
-import GitHub from "$lib/sections/GitHub.svelte";
-import Twitter from "$lib/sections/Twitter.svelte";
-import Email from "$lib/sections/Email.svelte";
-const headline="lumphammer projects";
-import About from "$lib/sections/About.svelte";
-import Instagram from "$lib/sections/Instagram.svelte";
-import Discord from "$lib/sections/Discord.svelte";
+	// import Email from "$lib/sections/Email.svelte";
+	const headline = "lumphammer";
 </script>
 
 <script lang="ts">
-</script>
+	import { browser } from "$app/env";
 
-<style>
-	p {
-		margin: 1em 0;
+	let email = "neil-at-lumphammer.com";
+
+	if (browser) {
+		email = email.replace("-at-", "@");
 	}
-</style>
+</script>
 
 <h1 data-text={headline}>
 	{headline}
 </h1>
 
 <p>
-	Hi, I'm Neil de Carteret, and this is my personal projects site. Yes the moiré
-	effect is deliberate. Drop me an email if it makes your device melt.
+	Hi, I'm Neil de Carteret. Yes the moiré effect is deliberate. I hope it doesn't make your device
+	melt.
 </p>
 
-<div class="grid">
-	<KoFi/>
-	<Investigator />
-	<!-- <Discord /> -->
-	<GitLab/>
-	<GitHub/>
-	<Twitter/>
-	<Instagram />
-	<About/>
-	<Email/>
-</div>
+<p>
+	Tip jar: If you like my work, please consider <a href="https://ko-fi.com/n3dst4"
+		>buying me a coffee</a
+	>.
+</p>
 
-<hr/>
-<!-- {#if showLorem}
-	<button on:click={toggleLorem}>Hide Lorem</button>
-{:else}
-	<button on:click={toggleLorem}>Show Lorem</button>
-{/if}
+<p>
+	I maintain the official GUMSHOE system for Foundry VTT: <a
+		href="https://github.com/n3dst4/gumshoe-fvtt">GUMSHOE for Foundry VTT</a
+	> (formerly known as INVESTIGATOR).
+</p>
 
-{#if showLorem}
-	<Lorem />
-{/if} -->
+<p>
+	Instagram: I post photos of my miniatures and cats on
+	<a href="https://www.instagram.com/n3dst4/">Instagram</a>.
+</p>
+
+<p>
+	Email: You can email me at
+	<a class="" href={`mailto: ${email}`} target="_new">{email}</a> if you like.
+</p>
+
+<style>
+	p {
+		margin: 1em 0;
+	}
+</style>
