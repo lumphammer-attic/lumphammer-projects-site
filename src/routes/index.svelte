@@ -1,15 +1,15 @@
 <script context="module" lang="ts">
 	// import Email from "$lib/sections/Email.svelte";
-	const headline = "lumphammer";
+	const headline = 'lumphammer';
 </script>
 
 <script lang="ts">
-	import { browser } from "$app/env";
+	import { browser } from '$app/env';
 
-	let email = "neil-at-lumphammer.com";
+	let email = 'neil-at-lumphammer.com';
 
 	if (browser) {
-		email = email.replace("-at-", "@");
+		email = email.replace('-at-', '@');
 	}
 </script>
 
@@ -23,25 +23,26 @@
 </p>
 
 <p>
-	Tip jar: If you like my work, please consider <a href="https://ko-fi.com/n3dst4"
+	Tip jar: If you like my work, please consider <a target="_new" href="https://ko-fi.com/n3dst4"
 		>buying me a coffee</a
 	>.
 </p>
 
 <p>
 	I maintain the official GUMSHOE system for Foundry VTT: <a
+		target="_new"
 		href="https://github.com/n3dst4/gumshoe-fvtt">GUMSHOE for Foundry VTT</a
 	> (formerly known as INVESTIGATOR).
 </p>
 
 <p>
 	Instagram: I post photos of my miniatures and cats on
-	<a href="https://www.instagram.com/n3dst4/">Instagram</a>.
+	<a target="_new" href="https://www.instagram.com/n3dst4/">Instagram</a>.
 </p>
 
 <p>
 	Email: You can email me at
-	<a class="" href={`mailto: ${email}`} target="_new">{email}</a> if you like.
+	<a href={`mailto: ${email}`} target="_new">{email}</a> if you like.
 </p>
 
 <style>
